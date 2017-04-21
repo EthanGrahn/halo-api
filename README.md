@@ -8,3 +8,13 @@ Right now this is mostly a rough test. I have the full Halo Wars 2 API supported
 Main To-do is to get a working rate limiter for the API working so I don't go over on calls. The dev API key only allows 10 calls per 10 seconds so it will be very easy to go over. I'm still working out the best way to rate limit effectively without adding any libraries and it looks like it shouldn't be too hard. I'd like to work in something like this guy has here: http://www.matteoagosti.com/blog/2013/01/22/rate-limiting-function-calls-in-javascript/. Seems pretty straight forward and doesn't involve importing another library.
 
 Once everything's straightened out a bit I might push the package to npm.
+
+Usage: 
+
+var APIWrapper = require("./src/halo.js");
+var halo = APIWrapper(YOUR_API_KEY);
+
+//Example
+halo.stats.playerMatchHistory('username').then( (matches) => {
+  console.log(matches);
+});
