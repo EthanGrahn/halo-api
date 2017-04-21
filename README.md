@@ -10,7 +10,7 @@ Main To-do is to get a working rate limiter for the API working so I don't go ov
 Once everything's straightened out a bit I might push the package to npm.
 
 Usage: 
-
+```
 var APIWrapper = require("./src/halo.js");
 var halo = APIWrapper(YOUR_API_KEY);
 
@@ -18,3 +18,4 @@ var halo = APIWrapper(YOUR_API_KEY);
 halo.stats.playerMatchHistory('username').then( (matches) => {
   console.log(matches);
 });
+```
