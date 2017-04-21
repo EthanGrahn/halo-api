@@ -1,6 +1,9 @@
+//Index.js serves only to test the API.
+
 require('dotenv').config();
 var haloWrapper = require("./halo.js");
 var halo = new haloWrapper(process.env.API_KEY);
+
 
 halo.metadata.playlists().then((data) => {
   console.log(data);
