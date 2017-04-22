@@ -1,4 +1,4 @@
-var httpWrapper = require("./httpWrapper.js");
+var httpWrapper = require("../httpWrapper.js");
 
 function stats(API_KEY){
   this._http = new httpWrapper(API_KEY);

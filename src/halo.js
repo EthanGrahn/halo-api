@@ -1,9 +1,9 @@
-var metadata = require("./metadata.js");
-var stats = require("./stats.js");
+var hw2 = require("./hw2/hw2.js");
+var h5 = require("./h5/h5.js");
 
 function halo(API_KEY){
-  halo.prototype.metadata = new metadata(API_KEY);
-  halo.prototype.stats = new stats(API_KEY);
+  halo.prototype.hw2 = new hw2(API_KEY);
+  halo.prototype.h5 = new h5(API_KEY);
 }
 
 module.exports = halo;

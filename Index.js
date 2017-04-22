@@ -1,16 +1,13 @@
 //Index.js serves only to test the API.
-
 require('dotenv').config();
 var haloWrapper = require("./src/halo.js");
 var halo = new haloWrapper(process.env.API_KEY);
 
-
-// halo.stats.playerXPs("googlrr").then( (XPs)=>{
-//   console.log(XPs.Results);
-// })
-//
-// halo.stats.playerMatchHistory('googlrr').then( (matches) => {
+// halo.hw2.stats.playerMatchHistory('googlrr').then( (matches) => {
 //   console.log(matches);
+// });
+// halo.h5.ugc.playerGameVariants('googlrr').then((games) => {
+//   console.log(games);
 // });
 //
 // halo.metadata.playlists().then((data) => {
@@ -21,6 +18,6 @@ var halo = new haloWrapper(process.env.API_KEY);
 //   console.log("bad");
 // });
 //
-// halo.metadata.techs().then((data) => {
-//   console.log(data.ContentItems);
+// halo.h5.stats.PCPlayerServiceRecords("googlrr").then((records) => {
+//   console.log(records.Results);
 // });
