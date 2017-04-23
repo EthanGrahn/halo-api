@@ -4,9 +4,13 @@ List of API Calls found at https://developer.haloapi.com/docs/services/.
 Calls are made with the same titles found in the above link, but in camelcasing. So, 'Player CSR' becomes playerCSR. 'Match Events' becomes matchEvents.
 
 Usage:
+
+Install via NPM
+npm install --save halo-api-wrapper
+
 ```
-var haloWrapper = require("./src/halo.js");
-var halo = new haloWrapper(process.env.API_KEY);
+var haloWrapper = require('halo-api-wrapper');
+var halo = new haloWrapper(YOUR_API_KEY);
 
 //For Halo 5
 halo.h5.stats.PCPlayerServiceRecords("googlrr").then((records) => {
