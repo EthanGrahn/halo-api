@@ -1,4 +1,6 @@
 # Halo API Wrapper for Node JS
+See https://googlrr.github.io/Halo-API-Wrapper-for-Node-JS/index.html for documentation!
+
 Returns a Promise containing the JSON of the requested API Call.
 List of API Calls found at https://developer.haloapi.com/docs/services/.
 Calls are made with the same titles found in the above link, but in camelcasing. So, 'Player CSR' becomes playerCSR. 'Match Events' becomes matchEvents.
