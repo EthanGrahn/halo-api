@@ -13,6 +13,23 @@ var halo = new haloWrapper(process.env.API_KEY);
 //   console.log(records.Results);
 // });
 
-halo.hw2.metadata.campaignLogs().then((levels) => {
-  console.log(levels);
+// halo.hw2.metadata.campaignLogs().then((levels) => {
+//   console.log(levels);
+// });
+//
+// halo.hw2.stats.playerCampaignProgress('googlrr').then((stats)=>{
+//   console.log(stats);
+// });
+
+// halo.hw2.metadata.playlists().then((playlists) => {
+//   console.log(playlists.ContentItems);
+// });
+
+halo.hw2.stats.playerPlaylistRatings('a177b19a32164962abdc4653dfb7911b', 'googlrr').then((ratings)=>{
+  console.log(ratings);
 });
+// halo.hw2.stats.playerXPs('googlrr').then( (ratings) =>{
+//   console.log(ratings);
+// }).catch( (rejected) => {
+//   console.log("oh no");
+// });

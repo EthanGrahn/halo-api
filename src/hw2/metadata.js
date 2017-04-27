@@ -12,6 +12,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Campaign Levels.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc435}
+  * @example
+  * halo.hw2.metadata.campaignLevels().then( (levels) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.campaignLevels = function(){
@@ -21,6 +25,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Campaign Logs.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc436}
+  * @example
+  * halo.hw2.metadata.campaignLogs().then( (logs) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.campaignLogs = function(){
@@ -30,6 +38,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Card Keywords.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ae45962109180bdcacc4eb}
+  * @example
+  * halo.hw2.metadata.cardKeywords().then( (keywords) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.cardKeywords = function(){
@@ -39,6 +51,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Cards.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc438}
+  * @example
+  * halo.hw2.metadata.cards().then( (cards) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.cards = function(){
@@ -48,6 +64,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns CSR Designations.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ae45962109180bdcacc4ec}
+  * @example
+  * halo.hw2.metadata.csrDesignations().then( (designations) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.csrDesignations = function(){
@@ -57,6 +77,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Difficulties.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43a}
+  * @example
+  * halo.hw2.metadata.difficulties().then( (difficulties) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.difficulties = function(){
@@ -66,6 +90,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Game Object Categories.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43b}
+  * @example
+  * halo.hw2.metadata.gameObjectCategories().then( (categories) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.gameObjectCategories = function(){
@@ -75,6 +103,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Game Objects.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43c}
+  * @example
+  * halo.hw2.metadata.gameObjects().then( (objs) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.gameObjects = function(){
@@ -84,6 +116,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Leader Powers.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43d}
+  * @example
+  * halo.hw2.metadata.leaderPowers().then( (powers) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.leaderPowers = function(){
@@ -93,6 +129,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Leaders.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43e}
+  * @example
+  * halo.hw2.metadata.leaders().then( (leaders) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.leaders = function(){
@@ -102,6 +142,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Maps.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43f}
+  * @example
+  * halo.hw2.metadata.maps().then( (maps) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.maps = function(){
@@ -111,6 +155,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Packs.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc440}
+  * @example
+  * halo.hw2.metadata.packs().then( (packs) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.packs = function(){
@@ -120,6 +168,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Playlists.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc441}
+  * @example
+  * halo.hw2.metadata.playlists().then( (playlists) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.playlists = function (){
@@ -129,6 +181,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Seasons.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc442}
+  * @example
+  * halo.hw2.metadata.seasons().then( (seasons) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.seasons = function (){
@@ -138,6 +194,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Spartan Ranks.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc443}
+  * @example
+  * halo.hw2.metadata.spartanRanks().then( (ranks) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.spartanRanks = function (){
@@ -147,6 +207,10 @@ module.exports = function metadata(API_KEY) {
   /**
   * Returns Techs.</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc444}
+  * @example
+  * halo.hw2.metadata.techs().then( (techs) => {
+  *   //Do code here
+  * });
   * @returns {Promise} Promise of JSON from API
   */
   this.techs = function (){
