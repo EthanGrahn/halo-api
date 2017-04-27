@@ -1,71 +1,155 @@
 var httpWrapper = require("../httpWrapper.js");
 
-function metadata(API_KEY){
+/** Creates a metadata object
+* @exports hw2/metadata
+* @constructor
+*/
+module.exports = function metadata(API_KEY) {
+
+  /** Initializes a new httpWrapper with API Key */
   this._http = new httpWrapper(API_KEY);
-}
 
-metadata.prototype.campaignLevels = function(){
-  return this._http.queryAPI('/metadata/hw2/campaign-levels');
-}
+  /**
+  * Returns Campaign Levels.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc435}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.campaignLevels = function(){
+    return this._http.queryAPI('/metadata/hw2/campaign-levels');
+  }
 
-metadata.prototype.campaignLogs = function(){
-  return this._http.queryAPI('/metadata/hw2/campaign-logs');
-}
+  /**
+  * Returns Campaign Logs.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc436}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.campaignLogs = function(){
+    return this._http.queryAPI('/metadata/hw2/campaign-logs');
+  }
 
-metadata.prototype.cardKeywords = function(){
-  return this._http.queryAPI('/metadata/hw2/card-keywords');
-}
+  /**
+  * Returns Card Keywords.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ae45962109180bdcacc4eb}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.cardKeywords = function(){
+    return this._http.queryAPI('/metadata/hw2/card-keywords');
+  }
 
-metadata.prototype.cards = function(){
-  return this._http.queryAPI('/metadata/hw2/cards');
-}
+  /**
+  * Returns Cards.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc438}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.cards = function(){
+    return this._http.queryAPI('/metadata/hw2/cards');
+  }
 
-metadata.prototype.csrDesignations = function(){
-  return this._http.queryAPI('/metadata/hw2/csr-designations');
-}
+  /**
+  * Returns CSR Designations.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ae45962109180bdcacc4ec}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.csrDesignations = function(){
+    return this._http.queryAPI('/metadata/hw2/csr-designations');
+  }
 
-metadata.prototype.difficulties = function(){
-  return this._http.queryAPI('/metadata/hw2/difficulties');
-}
+  /**
+  * Returns Difficulties.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43a}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.difficulties = function(){
+    return this._http.queryAPI('/metadata/hw2/difficulties');
+  }
 
-metadata.prototype.gameObjectCategories = function(){
-  return this._http.queryAPI('/metadata/hw2/game-object-categories');
-}
+  /**
+  * Returns Game Object Categories.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43b}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.gameObjectCategories = function(){
+    return this._http.queryAPI('/metadata/hw2/game-object-categories');
+  }
 
-metadata.prototype.gameObjects = function(){
-  return this._http.queryAPI('/metadata/hw2/game-objects');
-}
+  /**
+  * Returns Game Objects.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43c}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.gameObjects = function(){
+    return this._http.queryAPI('/metadata/hw2/game-objects');
+  }
 
-metadata.prototype.leaderPowers = function(){
-  return this._http.queryAPI('/metadata/hw2/leader-powers');
-}
+  /**
+  * Returns Leader Powers.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43d}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.leaderPowers = function(){
+    return this._http.queryAPI('/metadata/hw2/leader-powers');
+  }
 
-metadata.prototype.leaders = function(){
-  return this._http.queryAPI('/metadata/hw2/leaders');
-}
+  /**
+  * Returns Leaders.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43e}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.leaders = function(){
+    return this._http.queryAPI('/metadata/hw2/leaders');
+  }
 
-metadata.prototype.maps = function(){
-  return this._http.queryAPI('/metadata/hw2/maps');
-}
+  /**
+  * Returns Maps.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43f}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.maps = function(){
+    return this._http.queryAPI('/metadata/hw2/maps');
+  }
 
-metadata.prototype.packs = function(){
-  return this._http.queryAPI('/metadata/hw2/packs');
-}
+  /**
+  * Returns Packs.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc440}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.packs = function(){
+    return this._http.queryAPI('/metadata/hw2/packs');
+  }
 
-metadata.prototype.playlists = function (){
-  return this._http.queryAPI('/metadata/hw2/playlists');
-}
+  /**
+  * Returns Playlists.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc441}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.playlists = function (){
+    return this._http.queryAPI('/metadata/hw2/playlists');
+  }
 
-metadata.prototype.seasons = function (){
-  return this._http.queryAPI('/metadata/hw2/seasons');
-}
+  /**
+  * Returns Seasons.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc442}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.seasons = function (){
+    return this._http.queryAPI('/metadata/hw2/seasons');
+  }
 
-metadata.prototype.spartanRanks = function (){
-  return this._http.queryAPI('/metadata/hw2/spartan-ranks');
-}
+  /**
+  * Returns Spartan Ranks.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc443}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.spartanRanks = function (){
+    return this._http.queryAPI('/metadata/hw2/spartan-ranks');
+  }
 
-metadata.prototype.techs = function (){
-  return this._http.queryAPI('/metadata/hw2/techs');
+  /**
+  * Returns Techs.</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc444}
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.techs = function (){
+    return this._http.queryAPI('/metadata/hw2/techs');
+  }
 }
-
-module.exports = metadata;
