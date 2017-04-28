@@ -15,7 +15,7 @@ module.exports = function ugc(API_KEY){
   * @param {string} - Player
   * @param {string} - Variant (ID)
   * @example
-  * halo.hw2.metadata.playerGameVariant('player', 'ID').then( (variant) => {
+  * halo.hw2.ugc.playerGameVariant('player', 'ID').then( (variant) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
@@ -33,7 +33,7 @@ module.exports = function ugc(API_KEY){
   * @param {number} - Sort (Default Modified)
   * @param {string} - Order (Default desc)
   * @example
-  * halo.hw2.metadata.playerGameVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
+  * halo.hw2.ugc.playerGameVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
@@ -48,7 +48,7 @@ module.exports = function ugc(API_KEY){
   * @param {string} - Player
   * @param {string} - Variant ID
   * @example
-  * halo.hw2.metadata.playerMapVariant('player', 'variantID').then( (variant) => {
+  * halo.hw2.ugc.playerMapVariant('player', 'variantID').then( (variant) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
@@ -66,7 +66,7 @@ module.exports = function ugc(API_KEY){
   * @param {number} - Sort (Default Modified)
   * @param {string} - Order (Default desc)
   * @example
-  * halo.hw2.metadata.playerMapVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
+  * halo.hw2.ugc.playerMapVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
