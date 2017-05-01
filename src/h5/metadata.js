@@ -18,7 +18,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.campaignMissions = function(){
+  this.campaignMissions = function(){
     return this._http.queryAPI('/metadata/h5/metadata/campaign-missions');
   }
 
@@ -31,7 +31,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.commendations = function(){
+  this.commendations = function(){
     return this._http.queryAPI('/metadata/h5/metadata/commendations');
   }
 
@@ -44,7 +44,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.csrDesignations = function(){
+  this.csrDesignations = function(){
     return this._http.queryAPI('/metadata/h5/metadata/csr-designations');
   }
 
@@ -57,7 +57,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.enemies = function(){
+  this.enemies = function(){
     return this._http.queryAPI('/metadata/h5/metadata/enemies');
   }
 
@@ -70,7 +70,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.flexibleStats = function(){
+  this.flexibleStats = function(){
     return this._http.queryAPI('/metadata/h5/metadata/flexible-stats');
   }
 
@@ -83,7 +83,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.gameBaseVariants = function(){
+  this.gameBaseVariants = function(){
     return this._http.queryAPI('/metadata/h5/metadata/game-base-variants');
   }
 
@@ -96,7 +96,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.gameVariants = function(id){
+  this.gameVariants = function(id){
     return this._http.queryAPI('/metadata/h5/metadata/game-variants/' + id);
   }
 
@@ -109,7 +109,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.impulses = function(){
+  this.impulses = function(){
     return this._http.queryAPI('/metadata/h5/metadata/impulses');
   }
 
@@ -122,7 +122,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.mapVariant = function(id){
+  this.mapVariant = function(id){
     return this._http.queryAPI('/metadata/h5/metadata/map-variants/' + id);
   }
 
@@ -135,56 +135,139 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.maps = function(){
+  this.maps = function(){
     return this._http.queryAPI('/metadata/h5/metadata/maps');
   }
 
   /**
-  * Returns medals</br>
+  * Returns Medals</br>
   * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42b}
   * @example
-  * halo.h5.metadata.medals().then( (maps) => {
+  * halo.h5.metadata.medals().then( (medals) => {
   * //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  metadata.prototype.medals = function(){
+  this.medals = function(){
     return this._http.queryAPI('/metadata/h5/metadata/medals');
   }
 
-  metadata.prototype.playlists = function(){
+  /**
+  * Returns Playlists</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42c}
+  * @example
+  * halo.h5.metadata.playlists().then( (playlists) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.playlists = function(){
     return this._http.queryAPI('/metadata/h5/metadata/playlists');
   }
 
-  metadata.prototype.requisition = function(id){
+  /**
+  * Returns Requisition</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42d}
+  * @param {string} - ID of Requisition
+  * @example
+  * halo.h5.metadata.requisition().then( (requisition) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.requisition = function(id){
     return this._http.queryAPI('/metadata/h5/metadata/requisitions/' + id);
   }
 
-  metadata.prototype.requisitionPack = function(id){
+  /**
+  * Returns Requisition Pack</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42e}
+  * @param {string} - ID of Requisition Pack
+  * @example
+  * halo.h5.metadata.requisitionPack().then( (pack) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.requisitionPack = function(id){
     return this._http.queryAPI('/metadata/h5/metadata/requisition-packs/' + id);
   }
 
-  metadata.prototype.seasons = function(){
+  /**
+  * Returns Seasons</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42f}
+  * @example
+  * halo.h5.metadata.seasons().then( (seasons) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.seasons = function(){
     return this._http.queryAPI('/metadata/h5/metadata/seasons');
   }
 
-  metadata.prototype.skulls = function(){
+  /**
+  * Returns Skulls</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc430}
+  * @example
+  * halo.h5.metadata.skulls().then( (skulls) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.skulls = function(){
     return this._http.queryAPI('/metadata/h5/metadata/skulls');
   }
 
-  metadata.prototype.spartanRanks = function(){
+  /**
+  * Returns Spartan Ranks</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc431}
+  * @example
+  * halo.h5.metadata.spartanRanks().then( (ranks) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.spartanRanks = function(){
     return this._http.queryAPI('/metadata/h5/metadata/spartan-ranks');
   }
 
-  metadata.prototype.teamColors = function(){
+  /**
+  * Returns Team Colors</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc432}
+  * @example
+  * halo.h5.metadata.teamColors().then( (colors) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.teamColors = function(){
     return this._http.queryAPI('/metadata/h5/metadata/team-colors');
   }
 
-  metadata.prototype.vehicles = function(){
+  /**
+  * Returns Vehicles</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc433}
+  * @example
+  * halo.h5.metadata.vehicles().then( (vehicles) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.vehicles = function(){
     return this._http.queryAPI('/metadata/h5/metadata/vehicles');
   }
 
-  metadata.prototype.weapons = function(){
+  /**
+  * Returns Weapons</br>
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc434}
+  * @example
+  * halo.h5.metadata.weapons().then( (weapons) => {
+  * //Do code here
+  * });
+  * @returns {Promise} Promise of JSON from API
+  */
+  this.weapons = function(){
     return this._http.queryAPI('/metadata/h5/metadata/weapons');
   }
 }
