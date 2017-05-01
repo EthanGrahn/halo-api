@@ -15,7 +15,7 @@ module.exports = function profile(API_KEY){
   * @param {string} - Player Gamertag
   * @param {number} - Size in pixels (default 256). Must be 95, 128, 190, 256, 512.
   * @example
-  * halo.hw2.metadata.emblemImage("googlrr").then( (image) => {
+  * halo.h5.profile.emblemImage("googlrr").then( (image) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
@@ -31,7 +31,7 @@ module.exports = function profile(API_KEY){
   * @param {number} - Size in pixels (default 256). Must be 95, 128, 190, 256, 512.
   * @param {string} - Crop; Used to determined portion of image returned. (default 'full'). Must be 'full' or 'portrait'.
   * @example
-  * halo.hw2.metadata.spartanImage("googlrr").then( (image) => {
+  * halo.h5.profile.spartanImage("googlrr").then( (image) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
