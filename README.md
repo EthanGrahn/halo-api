@@ -1,9 +1,11 @@
 # Halo API Wrapper for Node JS
 See https://googlrr.github.io/Halo-API-Wrapper-for-Node-JS/index.html for documentation!
+
 Full Source Code available at https://github.com/Googlrr/Halo-API-Wrapper-for-Node-JS
 
 
 Returns a Promise containing the JSON of the requested API Call.
+
 List of API Calls found at https://developer.haloapi.com/docs/services/.
 
 Check 'classes' in the documentation for a complete list of commands. Each command should have an example of how it should be used.
@@ -40,4 +42,4 @@ Full API should be covered now. Any issues please open an issue at https://githu
 
 Started mostly as a project to learn about working with asynchronous calls and promises in Node.js, I decided to complete the API wrapper to include full coverage of the Halo API.
 
-This is purely a wrapper for the API and does not include any caching or rate limiting. I've thought about adding those but they're a bit out of the scope of what I was planning here. This is purely an easier way to interface with the Halo API. If you're looking to control your calls I recommend checking out this link: http://www.matteoagosti.com/blog/2013/01/22/rate-limiting-function-calls-in-javascript/. It has a pretty simple algorithm that should get some quick and dirty rate limiting going. 
+This is purely a wrapper for the API and does not include any caching or rate limiting. I've thought about adding those but they're a bit out of the scope of what I was planning here. This is purely an easier way to interface with the Halo API. If you're looking to control your calls I recommend checking out this link: http://www.matteoagosti.com/blog/2013/01/22/rate-limiting-function-calls-in-javascript/. It has a pretty simple algorithm that should get some quick and dirty rate limiting going.
