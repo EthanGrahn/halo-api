@@ -15,12 +15,12 @@ module.exports = function ugc(API_KEY){
   * @param {string} - Player
   * @param {string} - Variant (ID)
   * @example
-  * halo.hw2.metadata.playerGameVariant('player', 'ID').then( (variant) => {
+  * halo.h5.ugc.playerGameVariant('player', 'ID').then( (variant) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  ugc.prototype.playerGameVariant = function(player, variant){
+  this.playerGameVariant = function(player, variant){
     return this._http.queryAPI('/ugc/h5/players/' + player + '/gamevariants/' + variant);
   }
 
@@ -33,12 +33,12 @@ module.exports = function ugc(API_KEY){
   * @param {number} - Sort (Default Modified)
   * @param {string} - Order (Default desc)
   * @example
-  * halo.hw2.metadata.playerGameVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
+  * halo.h5.ugc.playerGameVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  ugc.prototype.playerGameVariants = function(player, start = 0, count = 100, sort = 'modified', order = 'desc'){
+  this.playerGameVariants = function(player, start = 0, count = 100, sort = 'modified', order = 'desc'){
     return this._http.queryAPI('/ugc/h5/players/' + player + '/gamevariants?start=' + start + '&count=' + count + '&sort=' + sort + '&order=' + order);
   }
 
@@ -48,12 +48,12 @@ module.exports = function ugc(API_KEY){
   * @param {string} - Player
   * @param {string} - Variant ID
   * @example
-  * halo.hw2.metadata.playerMapVariant('player', 'variantID').then( (variant) => {
+  * halo.h5.ugc.playerMapVariant('player', 'variantID').then( (variant) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  ugc.prototype.playerMapVariant = function(player, variant){
+  this.playerMapVariant = function(player, variant){
     return this._http.queryAPI('/ugc/h5/players/' + player + '/mapvariants/' + variant);
   }
 
@@ -66,12 +66,12 @@ module.exports = function ugc(API_KEY){
   * @param {number} - Sort (Default Modified)
   * @param {string} - Order (Default desc)
   * @example
-  * halo.hw2.metadata.playerMapVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
+  * halo.h5.ugc.playerMapVariants('player', 0, 100, 'modified', 'desc').then( (variants) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  ugc.prototype.playerMapVariants = function(player, start = 0, count = 25, sort = 'modified', order = 'desc'){
+  this.playerMapVariants = function(player, start = 0, count = 25, sort = 'modified', order = 'desc'){
     return this._http.queryAPI('/ugc/h5/players/' + player + '/mapvariants?start=' + start + '&count=' + count + '&sort=' + sort + '&order=' + order);
   }
 }

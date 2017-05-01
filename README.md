@@ -1,14 +1,22 @@
 # Halo API Wrapper for Node JS
 See https://googlrr.github.io/Halo-API-Wrapper-for-Node-JS/index.html for documentation!
 
+Full Source Code available at https://github.com/Googlrr/Halo-API-Wrapper-for-Node-JS
+
+
 Returns a Promise containing the JSON of the requested API Call.
+
 List of API Calls found at https://developer.haloapi.com/docs/services/.
-Calls are made with the same titles found in the above link, but in camelcasing. So, 'Player CSR' becomes playerCSR. 'Match Events' becomes matchEvents.
+
+Check 'classes' in the documentation for a complete list of commands. Each command should have an example of how it should be used.
+
+
+Install via NPM:
+```
+npm install --save halo-api-wrapper
+```
 
 Usage:
-
-Install via NPM
-npm install --save halo-api-wrapper
 
 ```
 var haloWrapper = require('halo-api-wrapper');
@@ -29,8 +37,9 @@ halo.hw2.stats.playerMatchHistory('googlrr').then( (matches) => {
 //  stuff you want to do with results
 //});
 ```
-Mostly started writing this because I wanted to test out working with asynchronous calls and how promises work in node.js. There are some other pretty good wrappers for the Halo API out there that work in node but I thought it would be more fun to try it out myself. Everything works in my testing so that's pretty cool.
 
-Main To-do is to get a working rate limiter for the API working so I don't go over on calls. The dev API key only allows 10 calls per 10 seconds so it will be very easy to go over. I'm still working out the best way to rate limit effectively without adding any libraries and it looks like it shouldn't be too hard. I'd like to work in something like this guy has here: http://www.matteoagosti.com/blog/2013/01/22/rate-limiting-function-calls-in-javascript/. Seems pretty straight forward and doesn't involve importing another library.
+Full API should be covered now. Any issues please open an issue at https://github.com/Googlrr/Halo-API-Wrapper-for-Node-JS/issues and I'll look at it as soon as possible! In my expience (mostly with the Halo Wars 2 portions) all of the calls return results correctly.
 
-Once everything's straightened out a bit I might push the package to npm.
+Started mostly as a project to learn about working with asynchronous calls and promises in Node.js, I decided to complete the API wrapper to include full coverage of the Halo API.
+
+This is purely a wrapper for the API and does not include any caching or rate limiting. I've thought about adding those but they're a bit out of the scope of what I was planning here. This is purely an easier way to interface with the Halo API. If you're looking to control your calls I recommend checking out this link: http://www.matteoagosti.com/blog/2013/01/22/rate-limiting-function-calls-in-javascript/. It has a pretty simple algorithm that should get some quick and dirty rate limiting going.

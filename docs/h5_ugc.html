@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Class: hw2/stats</title>
+	<title>Documentation Class: h5/ugc</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: hw2/stats</h1>
+	<h1 class="page-title">Class: h5/ugc</h1>
 <section>
 
 <header>
     
         <h2>
-        hw2/stats
+        h5/ugc
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="hw2/stats"><span class="type-signature"></span>new hw2/stats()</h4>
+    <h4 class="name" id="h5/ugc"><span class="type-signature"></span>new h5/ugc()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        Creates a stats object
+        Creates a ugc object
     </div>
     
 
@@ -244,7 +244,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="matchEvents"><span class="type-signature"></span>matchEvents(ID)</h4>
+    <h4 class="name" id="playerGameVariant"><span class="type-signature"></span>playerGameVariant(player, variant)</h4>
     
     
 </dt>
@@ -252,7 +252,7 @@
 
     
     <div class="description">
-        Returns Match Events</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b43">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b43</a>
+        Returns Player Game Variant.</br><a href="https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40c">https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40c</a>
     </div>
     
 
@@ -287,13 +287,13 @@
 
         <tr>
             
-                <td class="name"><code>ID</code></td>
+                <td class="name"><code>player</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">string</span>
 
 
 
@@ -304,7 +304,31 @@
 
             
 
-            <td class="description last">of match</td>
+            <td class="description last">Player</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>variant</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Variant (ID)</td>
         </tr>
 
     
@@ -392,7 +416,7 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.matchEvents(ID).then( (events) =&gt; {  //Do code here});</pre>
+    <pre class="sunlight-highlight-javascript">halo.h5.ugc.playerGameVariant(&#x27;player&#x27;, &#x27;ID&#x27;).then( (variant) =&gt; {  //Do code here});</pre>
 
 
     
@@ -402,7 +426,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="matchResult"><span class="type-signature"></span>matchResult(ID)</h4>
+    <h4 class="name" id="playerGameVariants"><span class="type-signature"></span>playerGameVariants(player, start, count, sort, order)</h4>
     
     
 </dt>
@@ -410,7 +434,7 @@
 
     
     <div class="description">
-        Returns Match Results</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b44">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b44</a>
+        Returns Player Game Variants.</br><a href="https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40d">https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40d</a>
     </div>
     
 
@@ -445,13 +469,13 @@
 
         <tr>
             
-                <td class="name"><code>ID</code></td>
+                <td class="name"><code>player</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">string</span>
 
 
 
@@ -462,354 +486,14 @@
 
             
 
-            <td class="description last">of match</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Promise of JSON from API
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.matchResults(ID).then( (results) =&gt; {  //Do code here});</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="playerCampaignProgress"><span class="type-signature"></span>playerCampaignProgress(Name)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Returns Player Campaign Progress</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b45">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b45</a>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>Name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">of player</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Promise of JSON from API
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.playerCampaignProgress(&#x27;player&#x27;).then( (progress) =&gt; {  //Do code here});</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="playerMatchHistory"><span class="type-signature"></span>playerMatchHistory(Name, Match, Index, Count)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Returns Player Match History</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b46">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b46</a>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>Name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">of player</td>
+            <td class="description last">Player</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Match</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Type (default all)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>Index</code></td>
+                <td class="name"><code>start</code></td>
             
 
             <td class="type">
@@ -826,14 +510,14 @@
 
             
 
-            <td class="description last">of match to start on (default 0)</td>
+            <td class="description last">Starting Index (Default 0)</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Count</code></td>
+                <td class="name"><code>count</code></td>
             
 
             <td class="type">
@@ -850,7 +534,55 @@
 
             
 
-            <td class="description last">of items to return (default 25)</td>
+            <td class="description last">Count (Default 100)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sort (Default Modified)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Order (Default desc)</td>
         </tr>
 
     
@@ -938,7 +670,7 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.playerMatchHistory(&#x27;player&#x27;, &#x27;matchmaking&#x27;, 0, 10).then( (matches) =&gt; {  //Do code here});</pre>
+    <pre class="sunlight-highlight-javascript">halo.h5.ugc.playerGameVariants(&#x27;player&#x27;, 0, 100, &#x27;modified&#x27;, &#x27;desc&#x27;).then( (variants) =&gt; {  //Do code here});</pre>
 
 
     
@@ -948,7 +680,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="playerPlaylistRatings"><span class="type-signature"></span>playerPlaylistRatings(ID, Comma-separated)</h4>
+    <h4 class="name" id="playerMapVariant"><span class="type-signature"></span>playerMapVariant(player, variant)</h4>
     
     
 </dt>
@@ -956,7 +688,7 @@
 
     
     <div class="description">
-        Returns Player Playlist Ratings</br>The ID that this wants can be obtained throuth the 'metadata' and then 'playlists'</br>In the metadata JSON the ID is referred to as 'Identity' (NOT 'ID') and looks like a177b19a32164962abdc4653dfb7911b</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b47">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b47</a>
+        Returns Player Map Variant.</br><a href="https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40e">https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40e</a>
     </div>
     
 
@@ -991,13 +723,13 @@
 
         <tr>
             
-                <td class="name"><code>ID</code></td>
+                <td class="name"><code>player</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
 
@@ -1008,20 +740,20 @@
 
             
 
-            <td class="description last">of playlist</td>
+            <td class="description last">Player</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Comma-separated</code></td>
+                <td class="name"><code>variant</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
 
@@ -1032,7 +764,7 @@
 
             
 
-            <td class="description last">list of players</td>
+            <td class="description last">Variant ID</td>
         </tr>
 
     
@@ -1120,7 +852,7 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.playerPlaylistRatings(&#x27;a177b19a32164962abdc4653dfb7911b&#x27;, &#x27;player1,player2&#x27;).then( (ratings) =&gt; {  //Do code here});</pre>
+    <pre class="sunlight-highlight-javascript">halo.h5.ugc.playerMapVariant(&#x27;player&#x27;, &#x27;variantID&#x27;).then( (variant) =&gt; {  //Do code here});</pre>
 
 
     
@@ -1130,7 +862,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="playerSeasonStatsSummary"><span class="type-signature"></span>playerSeasonStatsSummary(Name, ID)</h4>
+    <h4 class="name" id="playerMapVariants"><span class="type-signature"></span>playerMapVariants(player, start, count, sort, order)</h4>
     
     
 </dt>
@@ -1138,7 +870,7 @@
 
     
     <div class="description">
-        Returns Player Season Stats Summary</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b48">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b48</a>
+        Returns Player Map Variants.</br><a href="https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40f">https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40f</a>
     </div>
     
 
@@ -1173,13 +905,13 @@
 
         <tr>
             
-                <td class="name"><code>Name</code></td>
+                <td class="name"><code>player</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
 
@@ -1190,20 +922,20 @@
 
             
 
-            <td class="description last">of player</td>
+            <td class="description last">Player</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>ID</code></td>
+                <td class="name"><code>start</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">number</span>
 
 
 
@@ -1214,7 +946,79 @@
 
             
 
-            <td class="description last">of season</td>
+            <td class="description last">Starting Index (Default 0)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>count</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Count (Default 100)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sort (Default Modified)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Order (Default desc)</td>
         </tr>
 
     
@@ -1302,323 +1106,7 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.playerSeasonStatsSummary(ID, players).then( (stats) =&gt; {  //Do code here});</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="playerStatsSummary"><span class="type-signature"></span>playerStatsSummary(Name)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Returns Player Stats Summary</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b49">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b49</a>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>Name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">of player</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Promise of JSON from API
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.playerStatsSummary(player).then( (stats) =&gt; {  //Do code here});</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="playerXPs"><span class="type-signature"></span>playerXPs(Name)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Returns Player XPs</br><a href="https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b4a">https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b4a</a>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>Name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">of player</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Promise of JSON from API
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">halo.hw2.stats.playerXPs(player).then( (xps) =&gt; {  //Do code here});</pre>
+    <pre class="sunlight-highlight-javascript">halo.h5.ugc.playerMapVariants(&#x27;player&#x27;, 0, 100, &#x27;modified&#x27;, &#x27;desc&#x27;).then( (variants) =&gt; {  //Do code here});</pre>
 
 
     
