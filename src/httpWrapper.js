@@ -14,7 +14,7 @@ function httpWrapper(API_KEY){
 httpWrapper.prototype.queryAPI = function(path) {
   return new Promise((resolve, reject) => {
     let _options = options;
-    _options.path = path;
+    _options.path = encodeURI(path);
     let responseText = '';
     let request = https.request(_options, (response) => {
       response.on('data', (data) => {
