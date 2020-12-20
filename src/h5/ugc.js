@@ -21,7 +21,7 @@ module.exports = function ugc(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.playerGameVariant = function(player, variant){
-    return this._http.queryAPI('/ugc/h5/players/' + player + '/gamevariants/' + variant);
+    return this._http.queryAPI(`/ugc/h5/players/${player}/gamevariants/${variant}`);
   }
 
   /**
@@ -39,7 +39,7 @@ module.exports = function ugc(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.playerGameVariants = function(player, start = 0, count = 100, sort = 'modified', order = 'desc'){
-    return this._http.queryAPI('/ugc/h5/players/' + player + '/gamevariants?start=' + start + '&count=' + count + '&sort=' + sort + '&order=' + order);
+    return this._http.queryAPI(`/ugc/h5/players/${player}/gamevariants?start=${start}&count=${count}&sort=${sort}&order=${order}`);
   }
 
   /**
@@ -54,7 +54,7 @@ module.exports = function ugc(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.playerMapVariant = function(player, variant){
-    return this._http.queryAPI('/ugc/h5/players/' + player + '/mapvariants/' + variant);
+    return this._http.queryAPI(`/ugc/h5/players/${player}/mapvariants/${variant}`);
   }
 
   /**
@@ -72,6 +72,6 @@ module.exports = function ugc(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.playerMapVariants = function(player, start = 0, count = 25, sort = 'modified', order = 'desc'){
-    return this._http.queryAPI('/ugc/h5/players/' + player + '/mapvariants?start=' + start + '&count=' + count + '&sort=' + sort + '&order=' + order);
+    return this._http.queryAPI(`/ugc/h5/players/${player}/mapvariants?start=${start}&count=${count}&sort=${sort}&order=${order}`);
   }
 }

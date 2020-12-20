@@ -21,7 +21,7 @@ module.exports = function profile(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.emblemImage = function(player, size = 256){
-    return this._http.queryAPI('/profile/h5/profiles/' + player + '/emblem?size=' + size);
+    return this._http.queryAPI(`/profile/h5/profiles/${player}/emblem?size=${size}`);
   }
 
   /**
@@ -37,6 +37,6 @@ module.exports = function profile(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.spartanImage = function(player, size = 256, crop = 'full'){
-    return this._http.queryAPI('/profile/h5/profiles/' + player + '/spartan?size=' + size + 'crop=' + crop);
+    return this._http.queryAPI(`/profile/h5/profiles/${player}/spartan?size=${size}&crop=${crop}`);
   }
 }

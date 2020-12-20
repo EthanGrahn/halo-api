@@ -97,7 +97,7 @@ module.exports = function metadata(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.gameVariants = function(id){
-    return this._http.queryAPI('/metadata/h5/metadata/game-variants/' + id);
+    return this._http.queryAPI(`/metadata/h5/metadata/game-variants/${id}`);
   }
 
   /**
@@ -123,7 +123,7 @@ module.exports = function metadata(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.mapVariant = function(id){
-    return this._http.queryAPI('/metadata/h5/metadata/map-variants/' + id);
+    return this._http.queryAPI(`/metadata/h5/metadata/map-variants/${id}`);
   }
 
   /**
@@ -176,7 +176,7 @@ module.exports = function metadata(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.requisition = function(id){
-    return this._http.queryAPI('/metadata/h5/metadata/requisitions/' + id);
+    return this._http.queryAPI(`/metadata/h5/metadata/requisitions/${id}`);
   }
 
   /**
@@ -190,7 +190,7 @@ module.exports = function metadata(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.requisitionPack = function(id){
-    return this._http.queryAPI('/metadata/h5/metadata/requisition-packs/' + id);
+    return this._http.queryAPI(`/metadata/h5/metadata/requisition-packs/${id}`);
   }
 
   /**

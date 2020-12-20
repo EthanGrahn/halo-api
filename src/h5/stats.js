@@ -22,7 +22,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.playerCSR = function(seasonID, playlistID, count = 200){
-    return this._http.queryAPI('/stats/h5/player-leaderboards/csr/' + seasonID + '/' + playlistID + '?count=' + count);
+    return this._http.queryAPI(`/stats/h5/player-leaderboards/csr/${seasonID}/${playlistID}?count=${count}`);
   }
 
   /**
@@ -36,7 +36,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.matchEvents = function(matchID){
-    return this._http.queryAPI('/stats/h5/matches/' + matchID + '/events');
+    return this._http.queryAPI(`/stats/h5/matches/${matchID}/events`);
   }
 
   /**
@@ -50,7 +50,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.matchResultArena = function(matchID){
-    return this._http.queryAPI('/stats/h5/arena/matches/' + matchID);
+    return this._http.queryAPI(`/stats/h5/arena/matches/${matchID}`);
   }
 
   /**
@@ -64,7 +64,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.matchResultCampaign = function(matchID){
-    return this._http.queryAPI('/stats/h5/campaign/matches/' + matchID);
+    return this._http.queryAPI(`/stats/h5/campaign/matches/${matchID}`);
   }
 
   /**
@@ -78,7 +78,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.matchResultCustom = function(matchID){
-    return this._http.queryAPI('/stats/h5/custom/matches/' + matchID);
+    return this._http.queryAPI(`/stats/h5/custom/matches/${matchID}`);
   }
 
   /**
@@ -92,7 +92,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.matchResultWarzone = function(matchID){
-    return this._http.queryAPI('/stats/h5/warzone/matches/' + matchID);
+    return this._http.queryAPI(`/stats/h5/warzone/matches/${matchID}`);
   }
 
   /**
@@ -109,7 +109,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.playerMatchHistory = function(player, modes='arena,campaign,custom,warzone', start=0, count=25){
-    return this._http.queryAPI('/stats/h5/players/' + player + '/matches?modes=&start=&count=');
+    return this._http.queryAPI(`/stats/h5/players/${player}/matches?modes=${modes}&start=${start}&count=${count}`);
   }
 
   /**
@@ -118,16 +118,16 @@ module.exports = function stats(API_KEY){
   * @param {string} - Gamertags of players (comma separated)
   * @param {string} - Season ID (default current season)
   * @example
-  * halo.h5.stats.playerServiceRecordsArena("googlrr").then( (records) => {
+  * halo.h5.stats.playerServiceRecordsArena("MAX1MUM D3ATH").then( (records) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
   this.playerServiceRecordsArena = function(player, seasonID=''){
     if (seasonID === ''){
-      return this._http.queryAPI('/stats/h5/servicerecords/arena?players=' + player);
+      return this._http.queryAPI(`/stats/h5/servicerecords/arena?players=${player}`);
     } else {
-      return this._http.queryAPI('/stats/h5/servicerecords/arena?players=' + player + '&seasonId=' + seasonID);
+      return this._http.queryAPI(`/stats/h5/servicerecords/arena?players=${player}&seasonId=${seasonID}`);
     }
   }
 
@@ -136,13 +136,13 @@ module.exports = function stats(API_KEY){
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3d}
   * @param {string} - Gamertags of players (comma separated)
   * @example
-  * halo.h5.stats.playerServiceRecordsCampaign("googlrr").then( (records) => {
+  * halo.h5.stats.playerServiceRecordsCampaign("MAX1MUM D3ATH").then( (records) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
   this.playerServiceRecordsCampaign = function(player){
-    return this._http.queryAPI('/stats/h5/servicerecords/campaign?players=' + player);
+    return this._http.queryAPI(`/stats/h5/servicerecords/campaign?players=${player}`);
   }
 
   /**
@@ -150,13 +150,13 @@ module.exports = function stats(API_KEY){
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3e}
   * @param {string} - Gamertags of players (comma separated)
   * @example
-  * halo.h5.stats.playerServiceRecordsCustom("googlrr").then( (records) => {
+  * halo.h5.stats.playerServiceRecordsCustom("MAX1MUM D3ATH").then( (records) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
   this.playerServiceRecordsCustom = function(player){
-    return this._http.queryAPI('/stats/h5/servicerecords/custom?players=' + player);
+    return this._http.queryAPI(`/stats/h5/servicerecords/custom?players=${player}`);
   }
 
   /**
@@ -164,13 +164,13 @@ module.exports = function stats(API_KEY){
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3f}
   * @param {string} - Gamertags of players (comma separated)
   * @example
-  * halo.h5.stats.playerServiceRecordsWarzone("googlrr").then( (records) => {
+  * halo.h5.stats.playerServiceRecordsWarzone("MAX1MUM D3ATH").then( (records) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
   this.playerServiceRecordsWarzone = function(player){
-    return this._http.queryAPI('/stats/h5/servicerecords/warzone?players=' + player);
+    return this._http.queryAPI(`/stats/h5/servicerecords/warzone?players=${player}`);
   }
 
   /**
@@ -184,7 +184,7 @@ module.exports = function stats(API_KEY){
   * @returns {Promise} Promise of JSON from API
   */
   this.PCMatchResultCustom = function(matchID){
-    return this._http.queryAPI('/stats/h5pc/custom/matches/' + matchID);
+    return this._http.queryAPI(`/stats/h5pc/custom/matches/${matchID}`);
   }
 
   /**
@@ -195,13 +195,13 @@ module.exports = function stats(API_KEY){
   * @param {number} - Start index (default 0)
   * @param {number} - Count (default 25)
   * @example
-  * halo.h5.stats.PCPlayerMatchHistory("googlrr").then( (matches) => {
+  * halo.h5.stats.PCPlayerMatchHistory("MAX1MUM D3ATH").then( (matches) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
   this.PCPlayerMatchHistory = function(player, modes = 'arena,campaign,custom,warzone', start=0, count=25){
-    return this._http.queryAPI('/stats/h5pc/players/' + player + '/matches?modes' + modes + '&start=' + start + '&count'+ count);
+    return this._http.queryAPI(`/stats/h5pc/players/${player}/matches?modes=${modes}&start=${start}&count=${count}`);
   }
 
   /**
@@ -209,12 +209,12 @@ module.exports = function stats(API_KEY){
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b42}
   * @param {string} - Players Gamertags (comma separated)
   * @example
-  * halo.h5.stats.PCPlayerServiceRecords("googlrr").then( (matches) => {
+  * halo.h5.stats.PCPlayerServiceRecords("MAX1MUM D3ATH").then( (matches) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
   this.PCPlayerServiceRecords = function(players){
-    return this._http.queryAPI('/stats/h5pc/servicerecords/custom?players=' + players);
+    return this._http.queryAPI(`/stats/h5pc/servicerecords/custom?players=${players}`);
   }
 }
