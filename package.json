@@ -5,7 +5,7 @@
   "main": "./src/halo.js",
   "scripts": {
     "test": "mocha --recursive --exit",
-    "lint": "./node_modules/.bin/eslint ./src/ || exit 0",
+    "lint": "./node_modules/.bin/eslint ./src/",
     "docs": "run-s docs:clear docs:generate",
     "docs:generate": "./node_modules/.bin/jsdoc -R ./README.md -c ./conf.json -t ./node_modules/ink-docstrap/template -d ./docs -r ./src/",
     "docs:clear": "rm -r ./docs"
