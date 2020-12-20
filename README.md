@@ -27,4 +27,4 @@ halo.hw2.stats.playerMatchHistory('MAX1MUM D3ATH').then( (matches) => {
 });
 ```
 
-This is purely a wrapper for the API and does not include any caching or rate limiting. Contributing code and submission of issues is welcomed and appreciated.
+This is purely a wrapper for the API and does not include any caching or rate limiting. Contributing code and submission of issues is welcomed and appreciated. Please review the [contributing guidelines](CONTRIBUTING.md) before doing so.
