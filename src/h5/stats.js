@@ -177,12 +177,12 @@ module.exports = function Stats (API_KEY) {
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b40}
   * @param {string} - Match ID
   * @example
-  * halo.h5.stats.PCMatchResultCustom("matchID").then( (records) => {
+  * halo.h5.stats.matchResultCustomPC("matchID").then( (records) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.PCMatchResultCustom = function (matchID) {
+  this.matchResultCustomPC = function (matchID) {
     return this._http.queryAPI(`/stats/h5pc/custom/matches/${matchID}`)
   }
 
@@ -194,12 +194,12 @@ module.exports = function Stats (API_KEY) {
   * @param {number} - Start index (default 0)
   * @param {number} - Count (default 25)
   * @example
-  * halo.h5.stats.PCPlayerMatchHistory("MAX1MUM D3ATH").then( (matches) => {
+  * halo.h5.stats.playerMatchHistoryPC("MAX1MUM D3ATH").then( (matches) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.PCPlayerMatchHistory = function (player, modes = 'arena,campaign,custom,warzone', start = 0, count = 25) {
+  this.playerMatchHistoryPC = function (player, modes = 'arena,campaign,custom,warzone', start = 0, count = 25) {
     return this._http.queryAPI(`/stats/h5pc/players/${player}/matches?modes=${modes}&start=${start}&count=${count}`)
   }
 
@@ -208,12 +208,12 @@ module.exports = function Stats (API_KEY) {
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b42}
   * @param {string} - Players Gamertags (comma separated)
   * @example
-  * halo.h5.stats.PCPlayerServiceRecords("MAX1MUM D3ATH").then( (matches) => {
+  * halo.h5.stats.playerServiceRecordsPC("MAX1MUM D3ATH").then( (matches) => {
   *   //Do code here
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.PCPlayerServiceRecords = function (players) {
+  this.playerServiceRecordsPC = function (players) {
     return this._http.queryAPI(`/stats/h5pc/servicerecords/custom?players=${players}`)
   }
 }
