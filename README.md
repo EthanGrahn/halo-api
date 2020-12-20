@@ -17,7 +17,7 @@ var haloWrapper = require('halo-api-wrapper');
 var halo = new haloWrapper(YOUR_API_KEY);
 
 // Halo 5 PC Service Records
-halo.h5.stats.PCPlayerServiceRecords('MAX1MUM D3ATH').then((records) => {
+halo.h5.stats.playerServiceRecordsPC('MAX1MUM D3ATH').then((records) => {
   console.log(records.Results);
 });
 
@@ -27,4 +27,4 @@ halo.hw2.stats.playerMatchHistory('MAX1MUM D3ATH').then( (matches) => {
 });
 ```
 
-This is purely a wrapper for the API and does not include any caching or rate limiting. Contributing code and submission of issues is welcomed and appreciated. Please review the [contributing guidelines](CONTRIBUTING.md) before doing so.
+This is purely a wrapper for the API and does not include any caching or rate limiting. Contributing code and submission of issues is welcomed and appreciated. Please review the [contributing guidelines](https://github.com/EthanGrahn/halo-api/blob/master/CONTRIBUTING.md) before doing so.
