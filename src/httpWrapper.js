@@ -1,32 +1,32 @@
-var https = require("https");
+const https = require('https')
 
-var options = {
-  host: 'www.haloapi.com' ,
+const options = {
+  host: 'www.haloapi.com',
   path: '',
   method: 'GET',
-  headers: {"Ocp-Apim-Subscription-Key": ""}
-};
-
-function httpWrapper(API_KEY){
-  options.headers["Ocp-Apim-Subscription-Key"] = API_KEY;
+  headers: { 'Ocp-Apim-Subscription-Key': '' }
 }
 
-httpWrapper.prototype.queryAPI = function(path) {
+function HttpWrapper (API_KEY) {
+  options.headers['Ocp-Apim-Subscription-Key'] = API_KEY
+}
+
+HttpWrapper.prototype.queryAPI = function (path) {
   return new Promise((resolve, reject) => {
-    let _options = options;
-    _options.path = encodeURI(path);
-    let responseText = '';
-    let request = https.request(_options, (response) => {
+    const _options = options
+    _options.path = encodeURI(path)
+    let responseText = ''
+    const request = https.request(_options, (response) => {
       response.on('data', (data) => {
-        responseText += data;
-      });
-      response.on('end', () => {
-        resolve(JSON.parse(responseText));
+        responseText += data
       })
-    });
-    request.on('error', (e) => {reject(e)});
-    request.end();
-  });
+      response.on('end', () => {
+        resolve(JSON.parse(responseText))
+      })
+    })
+    request.on('error', (e) => { reject(e) })
+    request.end()
+  })
 }
 
-module.exports = httpWrapper;
+module.exports = HttpWrapper

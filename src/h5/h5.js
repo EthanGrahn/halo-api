@@ -1,13 +1,13 @@
-var metadata = require("./metadata.js");
-var stats = require("./stats.js");
-var profile = require("./profile.js");
-var ugc = require("./ugc.js");
+const Metadata = require('./metadata.js')
+const Stats = require('./stats.js')
+const Profile = require('./profile.js')
+const UGC = require('./ugc.js')
 
-function h5(API_KEY){
-  h5.prototype.metadata = new metadata(API_KEY);
-  h5.prototype.stats = new stats(API_KEY);
-  h5.prototype.ugc = new ugc(API_KEY);
-  h5.prototype.profile = new profile(API_KEY);
+function H5 (API_KEY) {
+  H5.prototype.metadata = new Metadata(API_KEY)
+  H5.prototype.stats = new Stats(API_KEY)
+  H5.prototype.ugc = new UGC(API_KEY)
+  H5.prototype.profile = new Profile(API_KEY)
 }
 
-module.exports = h5;
+module.exports = H5

@@ -1,13 +1,12 @@
-var httpWrapper = require("../httpWrapper.js");
+const HttpWrapper = require('../httpWrapper.js')
 
 /** Creates a metadata object
 * @exports h5/metadata
 * @constructor
 */
-module.exports = function metadata(API_KEY){
-
-  /** Initializes a new httpWrapper with API Key */
-  this._http = new httpWrapper(API_KEY);
+module.exports = function Metadata (API_KEY) {
+  /** Initializes a new HttpWrapper with API Key */
+  this._http = new HttpWrapper(API_KEY)
 
   /**
   * Returns Campaign Missions </br>
@@ -18,8 +17,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.campaignMissions = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/campaign-missions');
+  this.campaignMissions = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/campaign-missions')
   }
 
   /**
@@ -31,8 +30,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.commendations = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/commendations');
+  this.commendations = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/commendations')
   }
 
   /**
@@ -44,8 +43,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.csrDesignations = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/csr-designations');
+  this.csrDesignations = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/csr-designations')
   }
 
   /**
@@ -57,8 +56,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.enemies = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/enemies');
+  this.enemies = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/enemies')
   }
 
   /**
@@ -70,8 +69,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.flexibleStats = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/flexible-stats');
+  this.flexibleStats = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/flexible-stats')
   }
 
   /**
@@ -83,8 +82,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.gameBaseVariants = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/game-base-variants');
+  this.gameBaseVariants = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/game-base-variants')
   }
 
   /**
@@ -96,8 +95,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.gameVariants = function(id){
-    return this._http.queryAPI(`/metadata/h5/metadata/game-variants/${id}`);
+  this.gameVariants = function (id) {
+    return this._http.queryAPI(`/metadata/h5/metadata/game-variants/${id}`)
   }
 
   /**
@@ -109,8 +108,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.impulses = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/impulses');
+  this.impulses = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/impulses')
   }
 
   /**
@@ -122,8 +121,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.mapVariant = function(id){
-    return this._http.queryAPI(`/metadata/h5/metadata/map-variants/${id}`);
+  this.mapVariant = function (id) {
+    return this._http.queryAPI(`/metadata/h5/metadata/map-variants/${id}`)
   }
 
   /**
@@ -135,8 +134,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.maps = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/maps');
+  this.maps = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/maps')
   }
 
   /**
@@ -148,8 +147,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.medals = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/medals');
+  this.medals = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/medals')
   }
 
   /**
@@ -161,8 +160,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playlists = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/playlists');
+  this.playlists = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/playlists')
   }
 
   /**
@@ -175,8 +174,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.requisition = function(id){
-    return this._http.queryAPI(`/metadata/h5/metadata/requisitions/${id}`);
+  this.requisition = function (id) {
+    return this._http.queryAPI(`/metadata/h5/metadata/requisitions/${id}`)
   }
 
   /**
@@ -189,8 +188,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.requisitionPack = function(id){
-    return this._http.queryAPI(`/metadata/h5/metadata/requisition-packs/${id}`);
+  this.requisitionPack = function (id) {
+    return this._http.queryAPI(`/metadata/h5/metadata/requisition-packs/${id}`)
   }
 
   /**
@@ -202,8 +201,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.seasons = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/seasons');
+  this.seasons = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/seasons')
   }
 
   /**
@@ -215,8 +214,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.skulls = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/skulls');
+  this.skulls = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/skulls')
   }
 
   /**
@@ -228,8 +227,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.spartanRanks = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/spartan-ranks');
+  this.spartanRanks = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/spartan-ranks')
   }
 
   /**
@@ -241,8 +240,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.teamColors = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/team-colors');
+  this.teamColors = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/team-colors')
   }
 
   /**
@@ -254,8 +253,8 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.vehicles = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/vehicles');
+  this.vehicles = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/vehicles')
   }
 
   /**
@@ -267,7 +266,7 @@ module.exports = function metadata(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.weapons = function(){
-    return this._http.queryAPI('/metadata/h5/metadata/weapons');
+  this.weapons = function () {
+    return this._http.queryAPI('/metadata/h5/metadata/weapons')
   }
 }

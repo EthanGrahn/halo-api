@@ -1,13 +1,12 @@
-var httpWrapper = require("../httpWrapper.js");
+const HttpWrapper = require('../httpWrapper.js')
 
 /** Creates a profile object
 * @exports h5/profile
 * @constructor
 */
-module.exports = function profile(API_KEY){
-
-  /** Initializes a new httpWrapper with API Key */
-  this._http = new httpWrapper(API_KEY);
+module.exports = function Profile (API_KEY) {
+  /** Initializes a new HttpWrapper with API Key */
+  this._http = new HttpWrapper(API_KEY)
 
   /**
   * Returns Emblem Image.</br>
@@ -20,8 +19,8 @@ module.exports = function profile(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.emblemImage = function(player, size = 256){
-    return this._http.queryAPI(`/profile/h5/profiles/${player}/emblem?size=${size}`);
+  this.emblemImage = function (player, size = 256) {
+    return this._http.queryAPI(`/profile/h5/profiles/${player}/emblem?size=${size}`)
   }
 
   /**
@@ -36,7 +35,7 @@ module.exports = function profile(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.spartanImage = function(player, size = 256, crop = 'full'){
-    return this._http.queryAPI(`/profile/h5/profiles/${player}/spartan?size=${size}&crop=${crop}`);
+  this.spartanImage = function (player, size = 256, crop = 'full') {
+    return this._http.queryAPI(`/profile/h5/profiles/${player}/spartan?size=${size}&crop=${crop}`)
   }
 }

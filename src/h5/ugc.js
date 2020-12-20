@@ -1,13 +1,12 @@
-var httpWrapper = require("../httpWrapper.js");
+const HttpWrapper = require('../httpWrapper.js')
 
 /** Creates a ugc object
 * @exports h5/ugc
 * @constructor
 */
-module.exports = function ugc(API_KEY){
-
-  /** Initializes a new httpWrapper with API Key */
-  this._http = new httpWrapper(API_KEY);
+module.exports = function UGC (API_KEY) {
+  /** Initializes a new HttpWrapper with API Key */
+  this._http = new HttpWrapper(API_KEY)
 
   /**
   * Returns Player Game Variant.</br>
@@ -20,8 +19,8 @@ module.exports = function ugc(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerGameVariant = function(player, variant){
-    return this._http.queryAPI(`/ugc/h5/players/${player}/gamevariants/${variant}`);
+  this.playerGameVariant = function (player, variant) {
+    return this._http.queryAPI(`/ugc/h5/players/${player}/gamevariants/${variant}`)
   }
 
   /**
@@ -38,8 +37,8 @@ module.exports = function ugc(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerGameVariants = function(player, start = 0, count = 100, sort = 'modified', order = 'desc'){
-    return this._http.queryAPI(`/ugc/h5/players/${player}/gamevariants?start=${start}&count=${count}&sort=${sort}&order=${order}`);
+  this.playerGameVariants = function (player, start = 0, count = 100, sort = 'modified', order = 'desc') {
+    return this._http.queryAPI(`/ugc/h5/players/${player}/gamevariants?start=${start}&count=${count}&sort=${sort}&order=${order}`)
   }
 
   /**
@@ -53,8 +52,8 @@ module.exports = function ugc(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerMapVariant = function(player, variant){
-    return this._http.queryAPI(`/ugc/h5/players/${player}/mapvariants/${variant}`);
+  this.playerMapVariant = function (player, variant) {
+    return this._http.queryAPI(`/ugc/h5/players/${player}/mapvariants/${variant}`)
   }
 
   /**
@@ -71,7 +70,7 @@ module.exports = function ugc(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerMapVariants = function(player, start = 0, count = 25, sort = 'modified', order = 'desc'){
-    return this._http.queryAPI(`/ugc/h5/players/${player}/mapvariants?start=${start}&count=${count}&sort=${sort}&order=${order}`);
+  this.playerMapVariants = function (player, start = 0, count = 25, sort = 'modified', order = 'desc') {
+    return this._http.queryAPI(`/ugc/h5/players/${player}/mapvariants?start=${start}&count=${count}&sort=${sort}&order=${order}`)
   }
 }

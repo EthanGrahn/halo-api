@@ -1,13 +1,12 @@
-var httpWrapper = require("../httpWrapper.js");
+const HttpWrapper = require('../httpWrapper.js')
 
 /** Creates a metadata object
 * @exports hw2/metadata
 * @constructor
 */
-module.exports = function metadata(API_KEY) {
-
-  /** Initializes a new httpWrapper with API Key */
-  this._http = new httpWrapper(API_KEY);
+module.exports = function metadata (API_KEY) {
+  /** Initializes a new HttpWrapper with API Key */
+  this._http = new HttpWrapper(API_KEY)
 
   /**
   * Returns Campaign Levels.</br>
@@ -18,8 +17,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.campaignLevels = function(){
-    return this._http.queryAPI('/metadata/hw2/campaign-levels');
+  this.campaignLevels = function () {
+    return this._http.queryAPI('/metadata/hw2/campaign-levels')
   }
 
   /**
@@ -31,8 +30,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.campaignLogs = function(){
-    return this._http.queryAPI('/metadata/hw2/campaign-logs');
+  this.campaignLogs = function () {
+    return this._http.queryAPI('/metadata/hw2/campaign-logs')
   }
 
   /**
@@ -44,8 +43,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.cardKeywords = function(){
-    return this._http.queryAPI('/metadata/hw2/card-keywords');
+  this.cardKeywords = function () {
+    return this._http.queryAPI('/metadata/hw2/card-keywords')
   }
 
   /**
@@ -57,8 +56,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.cards = function(){
-    return this._http.queryAPI('/metadata/hw2/cards');
+  this.cards = function () {
+    return this._http.queryAPI('/metadata/hw2/cards')
   }
 
   /**
@@ -70,8 +69,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.csrDesignations = function(){
-    return this._http.queryAPI('/metadata/hw2/csr-designations');
+  this.csrDesignations = function () {
+    return this._http.queryAPI('/metadata/hw2/csr-designations')
   }
 
   /**
@@ -83,8 +82,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.difficulties = function(){
-    return this._http.queryAPI('/metadata/hw2/difficulties');
+  this.difficulties = function () {
+    return this._http.queryAPI('/metadata/hw2/difficulties')
   }
 
   /**
@@ -96,8 +95,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.gameObjectCategories = function(){
-    return this._http.queryAPI('/metadata/hw2/game-object-categories');
+  this.gameObjectCategories = function () {
+    return this._http.queryAPI('/metadata/hw2/game-object-categories')
   }
 
   /**
@@ -109,8 +108,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.gameObjects = function(){
-    return this._http.queryAPI('/metadata/hw2/game-objects');
+  this.gameObjects = function () {
+    return this._http.queryAPI('/metadata/hw2/game-objects')
   }
 
   /**
@@ -122,8 +121,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.leaderPowers = function(){
-    return this._http.queryAPI('/metadata/hw2/leader-powers');
+  this.leaderPowers = function () {
+    return this._http.queryAPI('/metadata/hw2/leader-powers')
   }
 
   /**
@@ -135,8 +134,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.leaders = function(){
-    return this._http.queryAPI('/metadata/hw2/leaders');
+  this.leaders = function () {
+    return this._http.queryAPI('/metadata/hw2/leaders')
   }
 
   /**
@@ -148,8 +147,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.maps = function(){
-    return this._http.queryAPI('/metadata/hw2/maps');
+  this.maps = function () {
+    return this._http.queryAPI('/metadata/hw2/maps')
   }
 
   /**
@@ -161,8 +160,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.packs = function(){
-    return this._http.queryAPI('/metadata/hw2/packs');
+  this.packs = function () {
+    return this._http.queryAPI('/metadata/hw2/packs')
   }
 
   /**
@@ -174,8 +173,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playlists = function (){
-    return this._http.queryAPI('/metadata/hw2/playlists');
+  this.playlists = function () {
+    return this._http.queryAPI('/metadata/hw2/playlists')
   }
 
   /**
@@ -187,8 +186,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.seasons = function (){
-    return this._http.queryAPI('/metadata/hw2/seasons');
+  this.seasons = function () {
+    return this._http.queryAPI('/metadata/hw2/seasons')
   }
 
   /**
@@ -200,8 +199,8 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.spartanRanks = function (){
-    return this._http.queryAPI('/metadata/hw2/spartan-ranks');
+  this.spartanRanks = function () {
+    return this._http.queryAPI('/metadata/hw2/spartan-ranks')
   }
 
   /**
@@ -213,7 +212,7 @@ module.exports = function metadata(API_KEY) {
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.techs = function (){
-    return this._http.queryAPI('/metadata/hw2/techs');
+  this.techs = function () {
+    return this._http.queryAPI('/metadata/hw2/techs')
   }
 }

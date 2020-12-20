@@ -1,13 +1,12 @@
-var httpWrapper = require("../httpWrapper.js");
+const HttpWrapper = require('../httpWrapper.js')
 
 /** Creates a stats object
 * @exports hw2/stats
 * @constructor
 */
-module.exports = function stats(API_KEY){
-
-  /** Initializes a new httpWrapper with API Key */
-  this._http = new httpWrapper(API_KEY);
+module.exports = function stats (API_KEY) {
+  /** Initializes a new HttpWrapper with API Key */
+  this._http = new HttpWrapper(API_KEY)
 
   /**
   * Returns Match Events</br>
@@ -19,8 +18,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.matchEvents = function(matchID){
-    return this._http.queryAPI(`/stats/hw2/matches/${matchID}/events`);
+  this.matchEvents = function (matchID) {
+    return this._http.queryAPI(`/stats/hw2/matches/${matchID}/events`)
   }
 
   /**
@@ -33,8 +32,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.matchResult = function(matchID){
-    return this._http.queryAPI(`/stats/hw2/matches/${matchID}`);
+  this.matchResult = function (matchID) {
+    return this._http.queryAPI(`/stats/hw2/matches/${matchID}`)
   }
 
   /**
@@ -47,8 +46,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerCampaignProgress = function(player){
-    return this._http.queryAPI('/stats/hw2/players/${player}/campaign-progress');
+  this.playerCampaignProgress = function (player) {
+    return this._http.queryAPI(`/stats/hw2/players/${player}/campaign-progress`)
   }
 
   /**
@@ -64,8 +63,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerMatchHistory = function(player, matchType = '', start = 0, count = 25){
-    return this._http.queryAPI(`/stats/hw2/players/${player}/matches?matchType=${matchType}&start=${start}&count=${count}`);
+  this.playerMatchHistory = function (player, matchType = '', start = 0, count = 25) {
+    return this._http.queryAPI(`/stats/hw2/players/${player}/matches?matchType=${matchType}&start=${start}&count=${count}`)
   }
 
   /**
@@ -81,8 +80,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerPlaylistRatings = function(playlistID, players){
-    return this._http.queryAPI(`/stats/hw2/playlist/${playlistID}/rating?players=${players}`);
+  this.playerPlaylistRatings = function (playlistID, players) {
+    return this._http.queryAPI(`/stats/hw2/playlist/${playlistID}/rating?players=${players}`)
   }
 
   /**
@@ -96,8 +95,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerSeasonStatsSummary = function(player, seasonID){
-    return this._http.queryAPI(`/stats/hw2/players/${player}/stats/seasons/${seasonID}`);
+  this.playerSeasonStatsSummary = function (player, seasonID) {
+    return this._http.queryAPI(`/stats/hw2/players/${player}/stats/seasons/${seasonID}`)
   }
 
   /**
@@ -110,8 +109,8 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerStatsSummary = function(player){
-    return this._http.queryAPI(`/stats/hw2/players/${player}/stats`);
+  this.playerStatsSummary = function (player) {
+    return this._http.queryAPI(`/stats/hw2/players/${player}/stats`)
   }
 
   /**
@@ -124,7 +123,7 @@ module.exports = function stats(API_KEY){
   * });
   * @returns {Promise} Promise of JSON from API
   */
-  this.playerXPs = function(player){
-    return this._http.queryAPI(`/stats/hw2/xp?players=${player}`);
+  this.playerXPs = function (player) {
+    return this._http.queryAPI(`/stats/hw2/xp?players=${player}`)
   }
 }

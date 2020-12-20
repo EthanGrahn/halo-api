@@ -1,9 +1,9 @@
-var metadata = require("./metadata.js");
-var stats = require("./stats.js");
+const Metadata = require('./metadata.js')
+const Stats = require('./stats.js')
 
-function hw2(API_KEY){
-  hw2.prototype.metadata = new metadata(API_KEY);
-  hw2.prototype.stats = new stats(API_KEY);
+function HW2 (API_KEY) {
+  HW2.prototype.metadata = new Metadata(API_KEY)
+  HW2.prototype.stats = new Stats(API_KEY)
 }
 
-module.exports = hw2;
+module.exports = HW2
