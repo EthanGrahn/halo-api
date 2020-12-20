@@ -1,12 +1,12 @@
 # Halo API Wrapper for Node JS
-See https://ethangrahn.github.io/halo-api/index.html for documentation.
+See [https://ethangrahn.github.io/halo-api/index.html](https://ethangrahn.github.io/halo-api/index.html) for documentation.
 
-This is a rework/continuation of a project found here: https://github.com/Googlrr/Halo-API-Wrapper-for-Node-JS
+This is a rework/continuation of a project found here: [https://github.com/Googlrr/Halo-API-Wrapper-for-Node-JS](https://github.com/Googlrr/Halo-API-Wrapper-for-Node-JS)
 
 
 Returns a Promise containing the JSON of the requested API Call.
 
-List of official Halo API Calls found at https://developer.haloapi.com/docs/services/.
+List of official Halo API Calls found at [https://developer.haloapi.com/docs/services/](https://developer.haloapi.com/docs/services/).
 
 Check 'classes' in the documentation for a complete list of commands. Each command includes an example usage.
 
