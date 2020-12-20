@@ -1,15 +1,17 @@
 //Index.js serves only to test the API.
 require('dotenv').config();
-var haloWrapper = require("./src/halo.js");
+var haloWrapper = require("../src/halo.js");
 var halo = new haloWrapper(process.env.API_KEY);
+const gamertag = 'MAX1MUM D3ATH'
 
-// halo.hw2.stats.playerMatchHistory('googlrr').then( (matches) => {
-//   console.log(matches);
-// });
-// halo.h5.ugc.playerGameVariants('googlrr').then((games) => {
+halo.h5.stats.playerMatchHistory(gamertag, 'arena', 0, 5).then( (matches) => {
+  console.log(matches);
+});
+
+// halo.h5.ugc.playerGameVariants(gamertag).then((games) => {
 //   console.log(games);
 // });
-// halo.h5.stats.PCPlayerServiceRecords("googlrr").then((records) => {
+// halo.h5.stats.PCPlayerServiceRecords(gamertag).then((records) => {
 //   console.log(records.Results);
 // });
 
@@ -17,7 +19,7 @@ var halo = new haloWrapper(process.env.API_KEY);
 //   console.log(levels);
 // });
 //
-// halo.hw2.stats.playerCampaignProgress('googlrr').then((stats)=>{
+// halo.hw2.stats.playerCampaignProgress(gamertag).then((stats)=>{
 //   console.log(stats);
 // });
 //
@@ -29,16 +31,16 @@ var halo = new haloWrapper(process.env.API_KEY);
 //   }
 // });
 
-// halo.hw2.stats.playerPlaylistRatings('a177b19a32164962abdc4653dfb7911b', 'googlrr').then((ratings)=>{
+// halo.hw2.stats.playerPlaylistRatings('a177b19a32164962abdc4653dfb7911b', gamertag).then((ratings)=>{
 //   console.log(ratings);
 // });
-// halo.hw2.stats.playerXPs('googlrr').then( (ratings) =>{
+// halo.hw2.stats.playerXPs(gamertag).then( (ratings) =>{
 //   console.log(ratings);
 // }).catch( (rejected) => {
 //   console.log("oh no");
 // });
 
-// halo.hw2.stats.playerPlaylistRatings('532bfd6c3db445b7a01011460b862be6', 'Googlrr').then((ratings)=>{
+// halo.hw2.stats.playerPlaylistRatings('532bfd6c3db445b7a01011460b862be6', gamertag).then((ratings)=>{
 //   console.log(ratings.Results);
 //   for(let x = 0; x < ratings.Results.length; x++){
 //     console.log(ratings.Results[x]);
@@ -54,6 +56,6 @@ var halo = new haloWrapper(process.env.API_KEY);
 // });
 
 
-halo.hw2.metadata.techs().then( (techs) => {
-  console.log(techs.ContentItems);
-});
+//halo.hw2.metadata.techs().then( (techs) => {
+//  console.log(techs.ContentItems);
+//});

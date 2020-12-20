@@ -4,9 +4,9 @@
   "description": "Node wrapper for the Halo API. Returns a Promise that will return the JSON from the API. Source available at ",
   "main": "./src/halo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test"
   },
-  "author": "Googlrr",
+  "author": "ekgrahn",
   "license": "ISC",
   "dependencies": {
     "https": "^1.0.0"
