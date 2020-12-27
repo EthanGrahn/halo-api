@@ -13,7 +13,7 @@ Check 'classes' in the documentation for a complete list of commands. Each comma
 ## Examples
 
 ```
-var haloWrapper = require('halo-api-wrapper');
+var haloWrapper = require('@ekgrahn/halo-api');
 var halo = new haloWrapper(YOUR_API_KEY);
 
 // Halo 5 PC Service Records
