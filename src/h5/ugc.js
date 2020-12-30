@@ -10,7 +10,7 @@ module.exports = function UGC (API_KEY) {
 
   /**
   * Returns Player Game Variant.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40c}
+  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40c?}
   * @param {string} - Player
   * @param {string} - Variant (ID)
   * @example
@@ -25,7 +25,7 @@ module.exports = function UGC (API_KEY) {
 
   /**
   * Returns Player Game Variants.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40d}
+  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40d?}
   * @param {string} - Player
   * @param {number} - Starting Index (Default 0)
   * @param {number} - Count (Default 100)
@@ -43,7 +43,7 @@ module.exports = function UGC (API_KEY) {
 
   /**
   * Returns Player Map Variant.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40e}
+  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40e?}
   * @param {string} - Player
   * @param {string} - Variant ID
   * @example
@@ -58,7 +58,7 @@ module.exports = function UGC (API_KEY) {
 
   /**
   * Returns Player Map Variants.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40f}
+  * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40f?}
   * @param {string} - Player
   * @param {number} - Starting Index (Default 0)
   * @param {number} - Count (Default 100)

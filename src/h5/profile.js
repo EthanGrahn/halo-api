@@ -10,7 +10,7 @@ module.exports = function Profile (API_KEY) {
 
   /**
   * Returns Emblem Image.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/58acdc2e2109180bdcacc404}
+  * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/Halo-5-Player-Emblem-Image?}
   * @param {string} - Player Gamertag
   * @param {number} - Size in pixels (default 256). Must be 95, 128, 190, 256, 512.
   * @example
@@ -25,7 +25,7 @@ module.exports = function Profile (API_KEY) {
 
   /**
   * Returns spartanImage.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/58acdc2e2109180bdcacc405}
+  * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/Halo-5-Player-Spartan-Image?}
   * @param {string} - Player Gamertag
   * @param {number} - Size in pixels (default 256). Must be 95, 128, 190, 256, 512.
   * @param {string} - Crop; Used to determined portion of image returned. (default 'full'). Must be 'full' or 'portrait'.
