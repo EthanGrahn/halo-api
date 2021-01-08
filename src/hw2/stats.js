@@ -10,7 +10,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Match Events</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b43}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Match-Events?}
   * @param {Number} ID of match
   * @example
   * halo.hw2.stats.matchEvents(ID).then( (events) => {
@@ -24,7 +24,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Match Results</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b44}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Match-Result?}
   * @param {Number} ID of match
   * @example
   * halo.hw2.stats.matchResults(ID).then( (results) => {
@@ -38,7 +38,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Player Campaign Progress</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b45}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Campaign-Progress?}
   * @param {String} Name of player
   * @example
   * halo.hw2.stats.playerCampaignProgress('player').then( (progress) => {
@@ -52,7 +52,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Player Match History</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b46}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Match-History?}
   * @param {String} Name of player
   * @param {String} Match Type (default all)
   * @param {number} Index of match to start on (default 0)
@@ -71,7 +71,7 @@ module.exports = function stats (API_KEY) {
   * Returns Player Playlist Ratings</br>
   * The ID that this wants can be obtained throuth the 'metadata' and then 'playlists'</br>
   * In the metadata JSON the ID is referred to as 'Identity' (NOT 'ID') and looks like a177b19a32164962abdc4653dfb7911b</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b47}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Playlist-Ratings?}
   * @param {String} ID of playlist
   * @param {String} Comma-separated list of players
   * @example
@@ -86,7 +86,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Player Season Stats Summary</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b48}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Season-Stats-Summary?}
   * @param {String} Name of player
   * @param {String} ID of season
   * @example
@@ -101,7 +101,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Player Stats Summary</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b49}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Stats-Summary?}
   * @param {String} Name of player
   * @example
   * halo.hw2.stats.playerStatsSummary(player).then( (stats) => {
@@ -115,7 +115,7 @@ module.exports = function stats (API_KEY) {
 
   /**
   * Returns Player XPs</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b4a}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-XPs?}
   * @param {String} Name of player
   * @example
   * halo.hw2.stats.playerXPs(player).then( (xps) => {
