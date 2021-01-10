@@ -10,7 +10,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Campaign Levels.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc435}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Campaign-Levels?}
   * @example
   * halo.hw2.metadata.campaignLevels().then( (levels) => {
   *   //Do code here
@@ -23,7 +23,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Campaign Logs.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc436}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Campaign-Logs?}
   * @example
   * halo.hw2.metadata.campaignLogs().then( (logs) => {
   *   //Do code here
@@ -36,7 +36,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Card Keywords.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ae45962109180bdcacc4eb}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Card-Keywords?}
   * @example
   * halo.hw2.metadata.cardKeywords().then( (keywords) => {
   *   //Do code here
@@ -49,7 +49,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Cards.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc438}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Cards?}
   * @example
   * halo.hw2.metadata.cards().then( (cards) => {
   *   //Do code here
@@ -62,7 +62,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns CSR Designations.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ae45962109180bdcacc4ec}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-CSR-Designations?}
   * @example
   * halo.hw2.metadata.csrDesignations().then( (designations) => {
   *   //Do code here
@@ -75,7 +75,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Difficulties.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43a}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Difficulties?}
   * @example
   * halo.hw2.metadata.difficulties().then( (difficulties) => {
   *   //Do code here
@@ -88,7 +88,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Game Object Categories.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43b}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Game-Object-Categories?}
   * @example
   * halo.hw2.metadata.gameObjectCategories().then( (categories) => {
   *   //Do code here
@@ -101,7 +101,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Game Objects.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43c}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Game-Objects?}
   * @example
   * halo.hw2.metadata.gameObjects().then( (objs) => {
   *   //Do code here
@@ -114,7 +114,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Leader Powers.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43d}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Leader-Powers?}
   * @example
   * halo.hw2.metadata.leaderPowers().then( (powers) => {
   *   //Do code here
@@ -127,7 +127,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Leaders.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43e}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Leaders?}
   * @example
   * halo.hw2.metadata.leaders().then( (leaders) => {
   *   //Do code here
@@ -140,7 +140,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Maps.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc43f}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Maps?}
   * @example
   * halo.hw2.metadata.maps().then( (maps) => {
   *   //Do code here
@@ -153,7 +153,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Packs.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc440}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Packs?}
   * @example
   * halo.hw2.metadata.packs().then( (packs) => {
   *   //Do code here
@@ -166,7 +166,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Playlists.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc441}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Playlists?}
   * @example
   * halo.hw2.metadata.playlists().then( (playlists) => {
   *   //Do code here
@@ -179,7 +179,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Seasons.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc442}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Seasons?}
   * @example
   * halo.hw2.metadata.seasons().then( (seasons) => {
   *   //Do code here
@@ -192,7 +192,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Spartan Ranks.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc443}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Spartan-Ranks?}
   * @example
   * halo.hw2.metadata.spartanRanks().then( (ranks) => {
   *   //Do code here
@@ -205,7 +205,7 @@ module.exports = function metadata (API_KEY) {
 
   /**
   * Returns Techs.</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc444}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-Wars-2-Techs?}
   * @example
   * halo.hw2.metadata.techs().then( (techs) => {
   *   //Do code here

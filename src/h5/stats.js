@@ -10,7 +10,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Leaderboard for Player CSR.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b35}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Leaderboard-Player-CSR?}
   * @param {string} - Season ID
   * @param {string} - Playlist ID
   * @param {number} - Count (default 200)
@@ -26,7 +26,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Match Events.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b36}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Events?}
   * @param {string} - Match ID
   * @example
   * halo.h5.stats.matchEvents("matchID").then( (results) => {
@@ -40,7 +40,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Match Result Arena.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b37}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Arena?}
   * @param {string} - Match ID
   * @example
   * halo.h5.stats.matchResultArena("matchID").then( (results) => {
@@ -54,7 +54,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Match Result Campaign.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b38}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Campaign?}
   * @param {string} - Match ID
   * @example
   * halo.h5.stats.matchResultCampaign("matchID").then( (results) => {
@@ -68,7 +68,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Match Result Custom.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b39}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Custom?}
   * @param {string} - Match ID
   * @example
   * halo.h5.stats.matchResultCustom("matchID").then( (results) => {
@@ -82,7 +82,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Match Result Warzone.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3a}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Warzone?}
   * @param {string} - Match ID
   * @example
   * halo.h5.stats.matchResultWarzone("matchID").then( (results) => {
@@ -96,7 +96,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Player Match History.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3b}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Match-History?}
   * @param {string} - Gamertag of Player
   * @param {string} - Modes (arena, campaign, custom, or warzone) Comma separated. (default all)
   * @param {number} - Start index (default 0)
@@ -113,7 +113,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Player Service Records - Arena.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3c}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Arena?}
   * @param {string} - Gamertags of players (comma separated)
   * @param {string} - Season ID (default current season)
   * @example
@@ -132,7 +132,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Player Service Records - Campaign.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3d}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Campaign?}
   * @param {string} - Gamertags of players (comma separated)
   * @example
   * halo.h5.stats.playerServiceRecordsCampaign("MAX1MUM D3ATH").then( (records) => {
@@ -146,7 +146,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Player Service Records - Custom.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3e}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Custom?}
   * @param {string} - Gamertags of players (comma separated)
   * @example
   * halo.h5.stats.playerServiceRecordsCustom("MAX1MUM D3ATH").then( (records) => {
@@ -160,7 +160,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns Player Service Records - Warzone.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b3f}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Warzone?}
   * @param {string} - Gamertags of players (comma separated)
   * @example
   * halo.h5.stats.playerServiceRecordsWarzone("MAX1MUM D3ATH").then( (records) => {
@@ -174,7 +174,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns PC - Match Result - Custom.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b40}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-PC-Match-Result-Custom?}
   * @param {string} - Match ID
   * @example
   * halo.h5.stats.matchResultCustomPC("matchID").then( (records) => {
@@ -188,7 +188,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns PC - Player Match History.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b41}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-PC-Player-Match-History?}
   * @param {string} - Players Gamertags
   * @param {string} - Modes (arena, campaign, custom, or warzone) (default all) Comma separated
   * @param {number} - Start index (default 0)
@@ -205,7 +205,7 @@ module.exports = function Stats (API_KEY) {
 
   /**
   * Returns PC - Player Service Records - Custom.</br>
-  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/58acdf28e2f7f70db4854b42}
+  * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-PC-Player-Service-Records-Custom?}
   * @param {string} - Players Gamertags (comma separated)
   * @example
   * halo.h5.stats.playerServiceRecordsPC("MAX1MUM D3ATH").then( (matches) => {

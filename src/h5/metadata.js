@@ -10,7 +10,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Campaign Missions </br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc421}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Campaign-Missions?}
   * @example
   * halo.h5.metadata.campaignMissions().then( (missions) => {
   * //Do code here
@@ -23,7 +23,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Commendations </br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc422}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Commendations?}
   * @example
   * halo.h5.metadata.commendations().then( (commendations) => {
   * //Do code here
@@ -36,7 +36,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns CSR Designations </br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc423}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-CSR-Designations?}
   * @example
   * halo.h5.metadata.csrDesignations().then( (designations) => {
   * //Do code here
@@ -49,7 +49,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Enemies </br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc424}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Enemies?}
   * @example
   * halo.h5.metadata.enemies().then( (enemies) => {
   * //Do code here
@@ -62,7 +62,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Flexible Stats</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc425}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Flexible-Stats?}
   * @example
   * halo.h5.metadata.flexibleStats().then( (stats) => {
   * //Do code here
@@ -75,7 +75,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Game Base Variants</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc426}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Game-Base-Variants?}
   * @example
   * halo.h5.metadata.gameBaseVariants().then( (variants) => {
   * //Do code here
@@ -88,7 +88,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Game Variants</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc427}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Game-Variant?}
   * @example
   * halo.h5.metadata.gameVariants().then( (variants) => {
   * //Do code here
@@ -101,7 +101,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Impulses</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc428}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Impulses?}
   * @example
   * halo.h5.metadata.impulses().then( (impulses) => {
   * //Do code here
@@ -114,7 +114,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Map Variant</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc429}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Map-Variant?}
   * @example
   * halo.h5.metadata.mapVariant().then( (variant) => {
   * //Do code here
@@ -127,7 +127,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Maps</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42a}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Maps?}
   * @example
   * halo.h5.metadata.maps().then( (maps) => {
   * //Do code here
@@ -140,7 +140,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Medals</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42b}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Medals?}
   * @example
   * halo.h5.metadata.medals().then( (medals) => {
   * //Do code here
@@ -153,7 +153,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Playlists</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42c}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Playlists?}
   * @example
   * halo.h5.metadata.playlists().then( (playlists) => {
   * //Do code here
@@ -166,7 +166,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Requisition</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42d}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Requisition?}
   * @param {string} - ID of Requisition
   * @example
   * halo.h5.metadata.requisition().then( (requisition) => {
@@ -180,7 +180,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Requisition Pack</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42e}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Requisition-Pack?}
   * @param {string} - ID of Requisition Pack
   * @example
   * halo.h5.metadata.requisitionPack().then( (pack) => {
@@ -194,7 +194,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Seasons</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc42f}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Seasons?}
   * @example
   * halo.h5.metadata.seasons().then( (seasons) => {
   * //Do code here
@@ -207,7 +207,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Skulls</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc430}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Skulls?}
   * @example
   * halo.h5.metadata.skulls().then( (skulls) => {
   * //Do code here
@@ -220,7 +220,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Spartan Ranks</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc431}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Spartan-Ranks?}
   * @example
   * halo.h5.metadata.spartanRanks().then( (ranks) => {
   * //Do code here
@@ -233,7 +233,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Team Colors</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc432}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Team-Colors?}
   * @example
   * halo.h5.metadata.teamColors().then( (colors) => {
   * //Do code here
@@ -246,7 +246,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Vehicles</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc433}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Vehicles?}
   * @example
   * halo.h5.metadata.vehicles().then( (vehicles) => {
   * //Do code here
@@ -259,7 +259,7 @@ module.exports = function Metadata (API_KEY) {
 
   /**
   * Returns Weapons</br>
-  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/58ace18c2109180bdcacc434}
+  * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Weapons?}
   * @example
   * halo.h5.metadata.weapons().then( (weapons) => {
   * //Do code here
