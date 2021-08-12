@@ -1,6 +1,6 @@
 {
   "name": "@ekgrahn/halo-api",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Node wrapper for the Halo API. Returns a Promise that will return JSON from the API response.",
   "main": "./src/halo.js",
   "scripts": {
