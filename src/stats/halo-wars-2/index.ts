@@ -7,7 +7,7 @@ export enum MatchType {
 }
 
 export class HaloWars2 {
-  private httpWrapper: HttpWrapper = undefined
+  private httpWrapper: HttpWrapper
   private readonly STATS_PATH: string = '/stats/hw2'
 
   constructor(httpWrapper: HttpWrapper) {

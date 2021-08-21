@@ -4,12 +4,12 @@ import { Stats } from './stats'
 import { UGC } from './ugc'
 import { HttpWrapper } from './httpWrapper'
 
-export class HaloAPI {
-    protected httpWrapper: HttpWrapper = undefined 
-    public metadata: Metadata = undefined
-    public ugc: UGC = undefined
-    public stats: Stats = undefined
-    public profile: Profile = undefined
+class HaloAPI {
+    protected httpWrapper: HttpWrapper 
+    public metadata: Metadata
+    public ugc: UGC
+    public stats: Stats
+    public profile: Profile
 
     constructor(apiKey: string) {
         this.httpWrapper = new HttpWrapper(apiKey)
@@ -19,3 +19,5 @@ export class HaloAPI {
         this.profile = new Profile(this.httpWrapper)
     }
 }
+
+export = HaloAPI

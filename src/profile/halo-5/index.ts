@@ -14,7 +14,7 @@ export enum ImageCrop {
 }
 
 export class Halo5 {
-    private httpWrapper: HttpWrapper = undefined
+    private httpWrapper: HttpWrapper
     private readonly PROFILE_PATH: string = '/profile/h5/profiles'
 
     constructor(httpWrapper: HttpWrapper) {

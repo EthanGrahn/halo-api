@@ -15,7 +15,7 @@ export enum Order {
 }
 
 export class Halo5 {
-  private httpWrapper: HttpWrapper = undefined
+  private httpWrapper: HttpWrapper
   private readonly UGC_PATH: string = '/ugc/h5'
 
   constructor(httpWrapper: HttpWrapper) {

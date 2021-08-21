@@ -1,7 +1,7 @@
 import { HttpWrapper } from '../../httpWrapper'
 
 export class HaloWars2 {
-  private httpWrapper: HttpWrapper = undefined
+  private httpWrapper: HttpWrapper
   private readonly METADATA_PATH: string = '/metadata/hw2'
 
   constructor(httpWrapper: HttpWrapper) {

@@ -10,7 +10,7 @@ export enum Mode {
 }
 
 export class Halo5 {
-  private httpWrapper: HttpWrapper = undefined
+  private httpWrapper: HttpWrapper
   private readonly STATS_PATH_CONSOLE: string = '/stats/h5'
   private readonly STATS_PATH_PC: string = '/stats/h5pc'
 
@@ -126,7 +126,7 @@ export class Halo5 {
 
     // If the modes input is an array, convert it to a comma separated list
     if (Array.isArray(modes)) {
-      let modeArray = []
+      let modeArray: Array<string> = []
       modes.forEach(element => {
         modeArray.push(element)
       });
@@ -249,7 +249,7 @@ export class Halo5 {
 
     // If the modes input is an array, convert it to a comma separated list
     if (Array.isArray(modes)) {
-      let modeArray = []
+      let modeArray: Array<string> = []
       modes.forEach(element => {
         modeArray.push(element)
       });

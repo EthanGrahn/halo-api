@@ -1,7 +1,7 @@
 import { HttpWrapper } from '../../httpWrapper'
 
 export class Halo5 {
-    private httpWrapper: HttpWrapper = undefined
+    private httpWrapper: HttpWrapper
     private readonly METADATA_PATH: string = '/metadata/h5/metadata'
 
     constructor(httpWrapper: HttpWrapper) {
@@ -89,14 +89,15 @@ export class Halo5 {
     /**
     * Returns Game Variants</br>
     * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Game-Variant?}
+    * @param {string} id ID of game variant
     * @example
     * halo.metadata.halo5.gameVariants().then( (variants) => {
     * //Do code here
     * });
     * @returns {Promise} Promise of JSON from API
     */
-    gameVariants = function (id) {
-        return this.httpWrapper.request(`${this.METADATA_PATH}/game-variants/${this.id}`)
+    gameVariants(id: string): Promise<any> {
+        return this.httpWrapper.request(`${this.METADATA_PATH}/game-variants/${id}`)
     }
 
     /**
@@ -115,14 +116,15 @@ export class Halo5 {
     /**
     * Returns Map Variant</br>
     * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Map-Variant?}
+    * @param {string} id ID of map variant
     * @example
     * halo.metadata.halo5.mapVariant().then( (variant) => {
     * //Do code here
     * });
     * @returns {Promise} Promise of JSON from API
     */
-    mapVariant = function (id) {
-        return this.httpWrapper.request(`${this.METADATA_PATH}/map-variants/${this.id}`)
+    mapVariant(id: string): Promise<any> {
+        return this.httpWrapper.request(`${this.METADATA_PATH}/map-variants/${id}`)
     }
 
     /**
@@ -167,29 +169,29 @@ export class Halo5 {
     /**
     * Returns Requisition</br>
     * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Requisition?}
-    * @param {string} - ID of Requisition
+    * @param {string} id ID of requisition
     * @example
     * halo.metadata.halo5.requisition().then( (requisition) => {
     * //Do code here
     * });
     * @returns {Promise} Promise of JSON from API
     */
-    requisition = function (id) {
-        return this.httpWrapper.request(`${this.METADATA_PATH}/requisitions/${this.id}`)
+    requisition(id: string): Promise<any> {
+        return this.httpWrapper.request(`${this.METADATA_PATH}/requisitions/${id}`)
     }
 
     /**
     * Returns Requisition Pack</br>
     * {@link https://developer.haloapi.com/docs/services/58ace18c21091812784ce8c5/operations/Halo-5-Requisition-Pack?}
-    * @param {string} - ID of Requisition Pack
+    * @param {string} id ID of requisition pack
     * @example
     * halo.metadata.halo5.requisitionPack().then( (pack) => {
     * //Do code here
     * });
     * @returns {Promise} Promise of JSON from API
     */
-    requisitionPack = function (id) {
-        return this.httpWrapper.request(`${this.METADATA_PATH}/requisition-packs/${this.id}`)
+    requisitionPack(id: string): Promise<any> {
+        return this.httpWrapper.request(`${this.METADATA_PATH}/requisition-packs/${id}`)
     }
 
     /**
