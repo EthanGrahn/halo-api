@@ -7,7 +7,7 @@ export class Metadata {
     public halo5: Halo5
 
     constructor(httpWrapper: HttpWrapper) {
-        this.haloWars2 = new HaloWars2(httpWrapper)
-        this.halo5 = new Halo5(httpWrapper)
+      this.haloWars2 = new HaloWars2(httpWrapper)
+      this.halo5 = new Halo5(httpWrapper)
     }
 }

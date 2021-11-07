@@ -19,139 +19,139 @@ export class Halo5 {
   }
 
   /**
-  * Returns Leaderboard for Player CSR.</br>
+  * Returns Leaderboard for Player CSR.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Leaderboard-Player-CSR?}
   * @param {string} seasonID Season ID
   * @param {string} playlistID Playlist ID
   * @param {number} count Count (default 200)
   * @example
-  * halo.stats.halo5.playerCSR("seasonID", "playlistID").then( (results) => {
+  * halo.stats.halo5.playerCSR("seasonID", "playlistID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-  playerCSR(seasonID: string, playlistID: string, count: number = 200): Promise<any> {
+  playerCSR(seasonID: string, playlistID: string, count = 200): Promise<any> {
     count = count < 1 ? 1 : count
 
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/player-leaderboards/csr/${seasonID}/${playlistID}?count=${count}`)
   }
 
   /**
-  * Returns Match Events.</br>
+  * Returns Match Events.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Events?}
   * @param {string} matchID Match ID
   * @example
-  * halo.stats.halo5.matchEvents("matchID").then( (results) => {
+  * halo.stats.halo5.matchEvents("matchID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchEvents(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/matches/${matchID}/events`)
   }
 
   /**
-  * Returns Match Result Arena.</br>
+  * Returns Match Result Arena.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Arena?}
   * @param {string} matchID Match ID
   * @example
-  * halo.stats.halo5.matchResultArena("matchID").then( (results) => {
+  * halo.stats.halo5.matchResultArena("matchID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchResultArena(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/arena/matches/${matchID}`)
   }
 
   /**
-  * Returns Match Result Campaign.</br>
+  * Returns Match Result Campaign.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Campaign?}
   * @param {string} matchID Match ID
   * @example
-  * halo.stats.halo5.matchResultCampaign("matchID").then( (results) => {
+  * halo.stats.halo5.matchResultCampaign("matchID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchResultCampaign(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/campaign/matches/${matchID}`)
   }
 
   /**
-  * Returns Match Result Custom.</br>
+  * Returns Match Result Custom.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Custom?}
   * @param {string} matchID Match ID
   * @example
-  * halo.stats.halo5.matchResultCustom("matchID").then( (results) => {
+  * halo.stats.halo5.matchResultCustom("matchID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchResultCustom(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/custom/matches/${matchID}`)
   }
 
   /**
-  * Returns Match Result Warzone.</br>
+  * Returns Match Result Warzone.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Match-Result-Warzone?}
   * @param {string} matchID Match ID
   * @example
-  * halo.stats.halo5.matchResultWarzone("matchID").then( (results) => {
+  * halo.stats.halo5.matchResultWarzone("matchID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchResultWarzone(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/warzone/matches/${matchID}`)
   }
 
   /**
-  * Returns Player Match History.</br>
+  * Returns Player Match History.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Match-History?}
   * @param {string} player Gamertag of Player
   * @param {Mode} modes Modes: arena, campaign, custom, or warzone. (default all)
   * @param {number} start Start index (default 0)
   * @param {number} count Count (default 25)
   * @example
-  * halo.stats.halo5.playerMatchHistory ("matchID").then( (results) => {
+  * halo.stats.halo5.playerMatchHistory ("matchID").then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-  playerMatchHistory(player: string, modes: Mode | Array<Mode> = Mode.ALL, start: number = 0, count: number = 25): Promise<any> {
+  playerMatchHistory(player: string, modes: Mode | Array<Mode> = Mode.ALL, start = 0, count = 25): Promise<any> {
     start = start < 0 ? 0 : start
     count = count < 1 ? 1 : count    
-    let modeString: string = ''
+    let modeString = ''
 
     // If the modes input is an array, convert it to a comma separated list
     if (Array.isArray(modes)) {
-      let modeArray: Array<string> = []
+      const modeArray: Array<string> = []
       modes.forEach(element => {
         modeArray.push(element)
-      });
+      })
       modeString = modeArray.join(',')
     } else {
       modeString = modes
     }
 
-    let modeQuery: string = modes == Mode.ALL ? '?' : `?modes=${modeString}&`
+    const modeQuery: string = modes == Mode.ALL ? '?' : `?modes=${modeString}&`
 
     return this.httpWrapper.request(`${this.STATS_PATH_CONSOLE}/players/${player}/matches${modeQuery}start=${start}&count=${count}`)
   }
 
   /**
-  * Returns Player Service Records - Arena.</br>
+  * Returns Player Service Records - Arena.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Arena?}
   * @param {string} players Gamertags of players (comma separated)
   * @param {string} seasonID Season ID (default current season) (optional)
   * @example
-  * halo.stats.halo5.playerServiceRecordsArena("MAX1MUM D3ATH").then( (records) => {
+  * halo.stats.halo5.playerServiceRecordsArena('Gamertag').then((records) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-  playerServiceRecordsArena(players: string | Array<string>, seasonID: string = ''): Promise<any> {
+  playerServiceRecordsArena(players: string | Array<string>, seasonID = ''): Promise<any> {
     // If the players input is an array, convert it to a comma separated list
     if (Array.isArray(players)) {
       players = players.join(',')
@@ -161,14 +161,14 @@ export class Halo5 {
   }
 
   /**
-  * Returns Player Service Records - Campaign.</br>
+  * Returns Player Service Records - Campaign.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Campaign?}
   * @param {string} players Gamertags of players (comma separated)
   * @example
-  * halo.stats.halo5.playerServiceRecordsCampaign("MAX1MUM D3ATH").then( (records) => {
+  * halo.stats.halo5.playerServiceRecordsCampaign('Gamertag').then((records) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerServiceRecordsCampaign(players: string | Array<string>): Promise<any> {
     // If the players input is an array, convert it to a comma separated list
@@ -180,14 +180,14 @@ export class Halo5 {
   }
 
   /**
-  * Returns Player Service Records - Custom.</br>
+  * Returns Player Service Records - Custom.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Custom?}
   * @param {string} players Gamertags of players (comma separated)
   * @example
-  * halo.stats.halo5.playerServiceRecordsCustom("MAX1MUM D3ATH").then( (records) => {
+  * halo.stats.halo5.playerServiceRecordsCustom('Gamertag').then((records) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerServiceRecordsCustom(players: string | Array<string>): Promise<any> {
     // If the players input is an array, convert it to a comma separated list
@@ -199,14 +199,14 @@ export class Halo5 {
   }
 
   /**
-  * Returns Player Service Records - Warzone.</br>
+  * Returns Player Service Records - Warzone.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-Player-Service-Records-Warzone?}
   * @param {string} players Gamertags of players (comma separated)
   * @example
-  * halo.stats.halo5.playerServiceRecordsWarzone('MAX1MUM D3ATH').then( (records) => {
+  * halo.stats.halo5.playerServiceRecordsWarzone('Gamertag').then((records) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerServiceRecordsWarzone(players: string | Array<string>): Promise<any> {
     // If the players input is an array, convert it to a comma separated list
@@ -218,60 +218,60 @@ export class Halo5 {
   }
 
   /**
-  * Returns PC - Match Result - Custom.</br>
+  * Returns PC - Match Result - Custom.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-PC-Match-Result-Custom?}
   * @param {string} matchID Match ID
   * @example
-  * halo.stats.halo5.matchResultCustomPC("matchID").then( (records) => {
+  * halo.stats.halo5.matchResultCustomPC("matchID").then((records) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchResultCustomPC(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH_PC}/custom/matches/${matchID}`)
   }
 
   /**
-  * Returns PC - Player Match History.</br>
+  * Returns PC - Player Match History.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-PC-Player-Match-History?}
   * @param {string} player Gamertag of player
   * @param {string} modes (arena, campaign, custom, or warzone) (default all) Comma separated
   * @param {number} start Start index (default 0)
   * @param {number} count Number of results to return (default 25)
   * @example
-  * halo.stats.halo5.playerMatchHistoryPC("MAX1MUM D3ATH").then( (matches) => {
+  * halo.stats.halo5.playerMatchHistoryPC('Gamertag').then((matches) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerMatchHistoryPC(player: string, modes: Mode | Array<Mode> = Mode.ALL, start = 0, count = 25): Promise<any> {
-    let modeString: string = ''
+    let modeString = ''
 
     // If the modes input is an array, convert it to a comma separated list
     if (Array.isArray(modes)) {
-      let modeArray: Array<string> = []
+      const modeArray: Array<string> = []
       modes.forEach(element => {
         modeArray.push(element)
-      });
+      })
       modeString = modeArray.join(',')
     } else {
       modeString = modes
     }
 
-    let modeQuery: string = modes == Mode.ALL ? '?' : `?modes=${modeString}&`
+    const modeQuery: string = modes == Mode.ALL ? '?' : `?modes=${modeString}&`
 
     return this.httpWrapper.request(`${this.STATS_PATH_PC}/players/${player}/matches${modeQuery}start=${start}&count=${count}`)
   }
 
   /**
-  * Returns PC - Player Service Records - Custom.</br>
+  * Returns PC - Player Service Records - Custom.
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-5-PC-Player-Service-Records-Custom?}
   * @param {string} players Players Gamertags (comma separated)
   * @example
-  * halo.stats.halo5.playerServiceRecordsPC('MAX1MUM D3ATH').then( (matches) => {
+  * halo.stats.halo5.playerServiceRecordsPC('Gamertag').then((matches) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerServiceRecordsPC(players: string | Array<string>): Promise<any> {
     // If the players input is an array, convert it to a comma separated list

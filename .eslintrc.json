@@ -1,23 +1,38 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
         "es2021": true
     },
     "extends": [
-        "standard"
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 12
+        "ecmaVersion": 12,
+        "sourceType": "module"
     },
+    "plugins": [
+        "@typescript-eslint",
+        "eslint-plugin-tsdoc"
+    ],
     "rules": {
-    },
-    "overrides": [
-        {
-            "files": ["test/*.js"],
-            "env": {
-                "mocha": true
-            }
-        }
-    ]
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "tsdoc/syntax": "warn"
+    }
 }

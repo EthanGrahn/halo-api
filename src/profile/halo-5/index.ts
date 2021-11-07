@@ -18,51 +18,51 @@ export class Halo5 {
     private readonly PROFILE_PATH: string = '/profile/h5/profiles'
 
     constructor(httpWrapper: HttpWrapper) {
-        this.httpWrapper = httpWrapper
+      this.httpWrapper = httpWrapper
     }
 
-  /**
-  * Returns Appearance.</br>
+    /**
+  * Returns Appearance.
   * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/Halo-5-Player-Appearance}
   * @param {string} - Player Gamertag
   * @example
-  * halo.profile.halo5.appearance('MAX1MUM D3ATH').then( (image) => {
+  * halo.profile.halo5.appearance('Gamertag').then((image) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-   appearance(player: string): Promise<any> {
-    return this.httpWrapper.request(`${this.PROFILE_PATH}/${player}/appearance`)
-  }
+    appearance(player: string): Promise<any> {
+      return this.httpWrapper.request(`${this.PROFILE_PATH}/${player}/appearance`)
+    }
 
-  /**
-  * Returns Emblem Image.</br>
+    /**
+  * Returns Emblem Image.
   * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/Halo-5-Player-Emblem-Image?}
   * @param {string} - Player Gamertag
   * @param {ImageSize} - Size in pixels (default 256). Must be 95, 128, 190, 256, or 512.
   * @example
-  * halo.profile.halo5.emblemImage('MAX1MUM D3ATH').then( (image) => {
+  * halo.profile.halo5.emblemImage('Gamertag').then((image) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-   emblemImage(player: string, size: ImageSize = ImageSize.TWO_HUNDRED_FIFTY_SIX): Promise<any> {
-    return this.httpWrapper.request(`${this.PROFILE_PATH}/${player}/emblem?size=${size}`)
-  }
+    emblemImage(player: string, size: ImageSize = ImageSize.TWO_HUNDRED_FIFTY_SIX): Promise<any> {
+      return this.httpWrapper.request(`${this.PROFILE_PATH}/${player}/emblem?size=${size}`)
+    }
 
-  /**
-  * Returns spartanImage.</br>
+    /**
+  * Returns spartanImage.
   * {@link https://developer.haloapi.com/docs/services/58acdc2e21091812784ce8c2/operations/Halo-5-Player-Spartan-Image?}
   * @param {string} - Player Gamertag
   * @param {ImageSize} - Size in pixels (default 256). Must be 95, 128, 190, 256, or 512.
   * @param {ImageCrop} - Crop; Used to determined portion of image returned. (default 'full'). Must be 'full' or 'portrait'.
   * @example
-  * halo.profile.halo5.spartanImage('MAX1MUM D3ATH').then( (image) => {
+  * halo.profile.halo5.spartanImage('Gamertag').then((image) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-  spartanImage(player: string, size: ImageSize = ImageSize.TWO_HUNDRED_FIFTY_SIX, crop: ImageCrop = ImageCrop.FULL): Promise<any> {
-    return this.httpWrapper.request(`${this.PROFILE_PATH}/${player}/spartan?size=${size}&crop=${crop}`)
-  }
+    spartanImage(player: string, size: ImageSize = ImageSize.TWO_HUNDRED_FIFTY_SIX, crop: ImageCrop = ImageCrop.FULL): Promise<any> {
+      return this.httpWrapper.request(`${this.PROFILE_PATH}/${player}/spartan?size=${size}&crop=${crop}`)
+    }
 }

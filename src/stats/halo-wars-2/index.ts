@@ -15,61 +15,61 @@ export class HaloWars2 {
   }
 
   /**
-  * Returns Match Events</br>
+  * Returns Match Events
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Match-Events?}
   * @param {Number} matchID ID of match
   * @example
-  * halo.stats.hw2.matchEvents(ID).then( (events) => {
+  * halo.stats.hw2.matchEvents(ID).then((events) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-   matchEvents(matchID: string): Promise<any> {
+  matchEvents(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH}/matches/${matchID}/events`)
   }
 
   /**
-  * Returns Match Results</br>
+  * Returns Match Results
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Match-Result?}
   * @param {string} matchID ID of match
   * @example
-  * halo.stats.hw2.matchResults(ID).then( (results) => {
+  * halo.stats.hw2.matchResults(ID).then((results) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   matchResult(matchID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH}/matches/${matchID}`)
   }
 
   /**
-  * Returns Player Campaign Progress</br>
+  * Returns Player Campaign Progress
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Campaign-Progress?}
   * @param {String} player Gamertag of player
   * @example
-  * halo.stats.hw2.playerCampaignProgress('player').then( (progress) => {
+  * halo.stats.hw2.playerCampaignProgress('Gamertag').then((progress) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerCampaignProgress(player: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH}/players/${player}/campaign-progress`)
   }
 
   /**
-  * Returns Player Match History</br>
+  * Returns Player Match History
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Match-History?}
   * @param {string} player Gamertag of player
   * @param {MatchType} matchType Match Type (default all)
   * @param {number} start Index of match to start on (default 0)
   * @param {number} count Count of items to return (default 25)
   * @example
-  * halo.stats.hw2.playerMatchHistory('MAX1MUM D3ATH', MatchType.MATCHMAKING, 0, 10).then( (matches) => {
+  * halo.stats.hw2.playerMatchHistory('Gamertag', MatchType.MATCHMAKING, 0, 10).then((matches) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
-  playerMatchHistory(player: string, matchType: MatchType = MatchType.ALL, start: number = 0, count: number = 25): Promise<any> {
+  playerMatchHistory(player: string, matchType: MatchType = MatchType.ALL, start = 0, count = 25): Promise<any> {
     // prevent count from being less than 1
     count = count < 1 ? 1 : count
     // prevent index from being negative
@@ -79,17 +79,17 @@ export class HaloWars2 {
   }
 
   /**
-  * Returns Player Playlist Ratings</br>
-  * The ID that this wants can be obtained throuth the 'metadata' and then 'playlists'</br>
-  * In the metadata JSON the ID is referred to as 'Identity' (NOT 'ID') and looks like a177b19a32164962abdc4653dfb7911b</br>
+  * Returns Player Playlist Ratings
+  * The ID that this wants can be obtained throuth the 'metadata' and then 'playlists'
+  * In the metadata JSON the ID is referred to as 'Identity' (NOT 'ID') and looks like a177b19a32164962abdc4653dfb7911b
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Playlist-Ratings?}
   * @param {string} playlistID ID of playlist
   * @param {string} players Comma-separated list or Array of players
   * @example
-  * halo.stats.hw2.playerPlaylistRatings('a177b19a32164962abdc4653dfb7911b', 'player1,player2').then( (ratings) => {
+  * halo.stats.hw2.playerPlaylistRatings('a177b19a32164962abdc4653dfb7911b', 'player1,player2').then((ratings) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerPlaylistRatings(playlistID: string, players: string | Array<string>): Promise<any> {
     // If the players input is a list, convert it to a comma separated list
@@ -101,43 +101,43 @@ export class HaloWars2 {
   }
 
   /**
-  * Returns Player Season Stats Summary</br>
+  * Returns Player Season Stats Summary
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Season-Stats-Summary?}
   * @param {String} player Gamertag of player
   * @param {String} seasonID ID of season
   * @example
-  * halo.stats.hw2.playerSeasonStatsSummary(ID, players).then( (stats) => {
+  * halo.stats.hw2.playerSeasonStatsSummary(ID, players).then((stats) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerSeasonStatsSummary(player: string, seasonID: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH}/players/${player}/stats/seasons/${seasonID}`)
   }
 
   /**
-  * Returns Player Stats Summary</br>
+  * Returns Player Stats Summary
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-Stats-Summary?}
   * @param {String} player Gamertag of player
   * @example
-  * halo.stats.hw2.playerStatsSummary(player).then( (stats) => {
+  * halo.stats.hw2.playerStatsSummary(player).then((stats) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerStatsSummary(player: string): Promise<any> {
     return this.httpWrapper.request(`${this.STATS_PATH}/players/${player}/stats`)
   }
 
   /**
-  * Returns Player XPs</br>
+  * Returns Player XPs
   * {@link https://developer.haloapi.com/docs/services/58acdf27e2f7f71ad0dad84b/operations/Halo-Wars-2-Player-XPs?}
   * @param {String} players Gamertags of players
   * @example
-  * halo.stats.hw2.playerXPs(player).then( (xps) => {
+  * halo.stats.hw2.playerXPs(player).then((xps) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * @returns Promise that resolves with JSON from API
   */
   playerXPs(players: string | Array<string>): Promise<any> {
     // If the players input is a list, convert it to a comma separated list

@@ -1,5 +1,8 @@
 node_modules
+dist
 .npm
 .env
 # built typescript files
-src/**/*.js
+*.js
+*.d.ts
+!jest.config.js

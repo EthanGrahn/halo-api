@@ -4,7 +4,7 @@ import { Stats } from './stats'
 import { UGC } from './ugc'
 import { HttpWrapper } from './httpWrapper'
 
-class HaloAPI {
+export class HaloAPI {
     protected httpWrapper: HttpWrapper 
     public metadata: Metadata
     public ugc: UGC
@@ -12,12 +12,10 @@ class HaloAPI {
     public profile: Profile
 
     constructor(apiKey: string) {
-        this.httpWrapper = new HttpWrapper(apiKey)
-        this.metadata = new Metadata(this.httpWrapper)
-        this.ugc = new UGC(this.httpWrapper)
-        this.stats = new Stats(this.httpWrapper)
-        this.profile = new Profile(this.httpWrapper)
+      this.httpWrapper = new HttpWrapper(apiKey)
+      this.metadata = new Metadata(this.httpWrapper)
+      this.ugc = new UGC(this.httpWrapper)
+      this.stats = new Stats(this.httpWrapper)
+      this.profile = new Profile(this.httpWrapper)
     }
 }
-
-export = HaloAPI

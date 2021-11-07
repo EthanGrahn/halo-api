@@ -1,4 +1,7 @@
 import { HttpWrapper } from '../../httpWrapper'
+import { PlayerGameVariant, PlayerGameVariants, PlayerMapVariant, PlayerMapVariants } from './response'
+
+export * from './response'
 
 export enum Sort {
   NAME = 'name',
@@ -14,44 +17,54 @@ export enum Order {
   DESCENDING = 'desc'
 }
 
-export class Halo5 {
+export class Halo5UGC {
   private httpWrapper: HttpWrapper
   private readonly UGC_PATH: string = '/ugc/h5'
 
-  constructor(httpWrapper: HttpWrapper) {
-    this.httpWrapper = httpWrapper
+  constructor(arg: HttpWrapper | string) {
+    // argument is of type HttpWrapper
+    if (typeof arg !== 'string')
+      this.httpWrapper = arg
+    // argument is of type string (API Key passed in)
+    else
+      this.httpWrapper = new HttpWrapper(arg)
   }
 
   /**
-  * Returns Player Game Variant.</br>
+  * Returns Player Game Variant.
   * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40c?}
-  * @param {string} player Player
-  * @param {string} variant Variant (ID)
+  * @param player - Player
+  * @param variant - Variant (ID)
   * @example
-  * halo.ugc.halo5.playerGameVariant('player', 'ID').then( (variant) => {
+  * ```ts
+  * halo.ugc.halo5.playerGameVariant('Gamertag', 'ID').then((variant) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * ```
+  * @see {@link PlayerGameVariant} for the returned data structure
+  * @returns Promise that resolves with JSON from API
   */
-  playerGameVariant(player: string, variant: string): Promise<any> {
+  playerGameVariant(player: string, variant: string): Promise<PlayerGameVariant> {
     return this.httpWrapper.request(`${this.UGC_PATH}/players/${player}/gamevariants/${variant}`)
   }
 
   /**
-  * Returns Player Game Variants.</br>
+  * Returns Player Game Variants.
   * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40d?}
-  * @param {string} player Player
-  * @param {number} start Starting Index (Default 0)
-  * @param {number} count Count (Default 100)
-  * @param {Sort} sort Sort (Default Modified)
-  * @param {Order} order Order (Default desc)
+  * @param player - Player
+  * @param start - Starting Index (Default 0)
+  * @param count - Count (Default 100)
+  * @param sort - Sort (Default Modified)
+  * @param order - Order (Default desc)
   * @example
-  * halo.ugc.halo5.playerGameVariants('player', 0, 100, Sort.MODIFIED, Order.DESCENDING).then( (variants) => {
+  * ```ts
+  * halo.ugc.halo5.playerGameVariants('Gamertag', 0, 100, Sort.MODIFIED, Order.DESCENDING).then((variants) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * ```
+  * @returns Promise that resolves with JSON from API
   */
-  playerGameVariants(player: string, start: number = 0, count: number = 100, sort: Sort = Sort.MODIFIED, order: Order = Order.DESCENDING): Promise<any> {
+  playerGameVariants(player: string, start = 0, count = 100, sort: Sort = Sort.MODIFIED, order: Order = Order.DESCENDING): Promise<PlayerGameVariants> {
     start = start < 0 ? 0 : start
     count = count < 1 ? 1 : count
 
@@ -59,35 +72,39 @@ export class Halo5 {
   }
 
   /**
-  * Returns Player Map Variant.</br>
+  * Returns Player Map Variant.
   * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40e?}
-  * @param {string} player Player
-  * @param {string} variant Variant ID
+  * @param player - Player
+  * @param variant - Variant ID
   * @example
-  * halo.ugc.halo5.playerMapVariant('player', 'variantID').then( (variant) => {
+  * ```ts
+  * halo.ugc.halo5.playerMapVariant('Gamertag', 'variantID').then((variant) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * ```
+  * @returns Promise that resolves with JSON from API
   */
-  playerMapVariant(player: string, variant: string): Promise<any> {
+  playerMapVariant(player: string, variant: string): Promise<PlayerMapVariant> {
     return this.httpWrapper.request(`${this.UGC_PATH}/players/${player}/mapvariants/${variant}`)
   }
 
   /**
-  * Returns Player Map Variants.</br>
+  * Returns Player Map Variants.<br/>
   * {@link https://developer.haloapi.com/docs/services/58acde2921091812784ce8c3/operations/58acde292109180bdcacc40f?}
-  * @param {string} player Player
-  * @param {number} start Starting Index (Default 0)
-  * @param {number} count Count (Default 100)
-  * @param {Sort} sort Sort (Default Modified)
-  * @param {Order} order Order (Default desc)
+  * @param player - Player
+  * @param start - Starting Index (Default 0)
+  * @param count - Count (Default 100)
+  * @param sort - Sort (Default Modified)
+  * @param order - Order (Default desc)
   * @example
-  * halo.ugc.halo5.playerMapVariants('player', 0, 100, Sort.MODIFIED, Order.DESCENDING).then( (variants) => {
+  * ```ts
+  * halo.ugc.halo5.playerMapVariants('Gamertag', 0, 100, Sort.MODIFIED, Order.DESCENDING).then((variants) => {
   *   //Do code here
   * });
-  * @returns {Promise} Promise of JSON from API
+  * ```
+  * @returns Promise that resolves with JSON from API
   */
-  playerMapVariants(player: string, start: number = 0, count: number = 25, sort: Sort = Sort.MODIFIED, order: Order = Order.DESCENDING): Promise<any> {
+  playerMapVariants(player: string, start = 0, count = 25, sort: Sort = Sort.MODIFIED, order: Order = Order.DESCENDING): Promise<PlayerMapVariants> {
     start = start < 0 ? 0 : start
     count = count < 1 ? 1 : count
 

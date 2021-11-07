@@ -4,12 +4,12 @@ export class HttpWrapper {
     private options: any
 
     constructor(apiKey: string) {
-        this.options = {
-            baseURL: 'https://www.haloapi.com',
-            url: '',
-            method: 'get',
-            headers: { 'Ocp-Apim-Subscription-Key': apiKey }
-        }
+      this.options = {
+        baseURL: 'https://www.haloapi.com',
+        url: '',
+        method: 'get',
+        headers: { 'Ocp-Apim-Subscription-Key': apiKey }
+      }
     }
 
     /**
@@ -18,8 +18,8 @@ export class HttpWrapper {
      * @returns Promise<any>
      */
     public request(path: string): Promise<any> {
-        const _options = this.options
-        _options.url = encodeURI(path)
-        return axios.default.request(_options)
+      const _options = this.options
+      _options.url = encodeURI(path)
+      return axios.default.request(_options)
     }
 }
